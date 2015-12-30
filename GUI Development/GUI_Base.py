@@ -1,6 +1,6 @@
 from Tkinter import *
 import Users
-import Work_Order as WO
+import Work_Order
 
 class E_Screens:
     __slots__ = ("LoginScreen",
@@ -179,25 +179,26 @@ class LoginScreen(Frame):
         
         self.controller = controller
         userNameFrame = Frame(self)
-        Label(userNameFrame, text = "User:").pack(side = LEFT, fill = 'x', expand = True)
+        Label(userNameFrame, text = "User:", justify = LEFT).pack(side = LEFT, fill = 'x', expand = True)
         
         menuButtonString = StringVar(self)
         menuButtonString.set("Choose a User")
         
+        self.errorLabelText = StringVar()
+        self.errorLabelText.set("")
+        
+        password = StringVar()
+        
         userNames = []
         for i in Users.users:
-            userNames.append(i.GetName())
+            userNames.append(i.name)
         menuButton = OptionMenu(userNameFrame, menuButtonString, *userNames)
         menuButton.pack(side = LEFT, fill = 'x', expand = True)
         userNameFrame.pack(fill = X)
         
         passwordFrame = Frame(self)
-        Label(passwordFrame, text = "Password: ").pack(side = LEFT, expand = 1, fill = 'x')
-        password = StringVar()
+        Label(passwordFrame, text = "Password: ", justify = LEFT).pack(side = LEFT, expand = 1, fill = 'x')
         Entry(passwordFrame, textvariable = password, show = "*").pack(side = LEFT, expand = 1, fill = 'x')
-        
-        self.errorLabelText = StringVar()
-        self.errorLabelText.set("")
         
         passwordFrame.pack(fill = X)
         loginButton = Button(self, text = "Login", command = lambda: controller.LeaveLoginScreen(password, menuButtonString.get(), self.errorLabelText, menuButtonString))

@@ -41,8 +41,6 @@ class User:
     def GetPassword(self):
         return self.password
                   
-    def GetName(self):
-        return self.name
         
 
 Andy  = User("Andy Woerpel", E_UserTypes.Admin, "cats")
