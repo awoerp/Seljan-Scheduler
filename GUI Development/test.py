@@ -31,9 +31,8 @@ class Application(Tk):
         
         
         
-    def ChangeFrame(self, *args):
+    def ChangeFrame(self, row, *args):
         frameToShow = jobOptions.index(self.dropDownText.get())
-        print("cats")
         self.frames[frameToShow].tkraise()
         
         
