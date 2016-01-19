@@ -1,7 +1,11 @@
 from Tkinter import *
 import Users
-import Work_Order as WO
+import Work_Order
 from numpy import zeros
+from datetime import date, timedelta
+
+jobNumber = 1928
+
 
 class E_Screens:
     __slots__ = ("LoginScreen",
@@ -90,7 +94,6 @@ class Application(Tk):
             if self.currentUser.Admin == False:
                 self.topButtons[3].config(state = DISABLED)
                 
-                
         def ShowFrame(self, screenNumber):
             self.frames[screenNumber].tkraise()
             
@@ -159,8 +162,66 @@ class CreateWOScreen(Frame):
     def __init__(self, parent, controller):
         Frame.__init__(self, parent)
         
+        defaultDueDateDelta = 7
+        
+        
+        creationDate_Day = IntVar(self)
+        creationDate_Month = IntVar(self)
+        creationDate_Year = IntVar(self)
+        
+        dueDate_Day   = IntVar(self)
+        dueDate_Month = IntVar(self)
+        dueDate_Year  = IntVar(self)
+        
+        creationDate = date.today()
+        day = creationDate.day
+        month = creationDate.month
+        year = creationDate.year
+        
+        creationDate_Day.set(day)
+        creationDate_Month.set(month)
+        creationDate_Year.set(year)
+        
+        defaultDueDate = creationDate + timedelta(days = defaultDueDateDelta)
+        
+        dueDate_Day.set(defaultDueDate.day)
+        dueDate_Month.set(defaultDueDate.month)
+        dueDate_Year.set(defaultDueDate.year)
+        
+        standardInfoFrame = Frame(self, pady = 3, padx = 5)
+        
+        Label(standardInfoFrame, text = "Job Number: %s" % (jobNumber)).pack(side = LEFT)
+        
+        dateFrame = Frame(standardInfoFrame)
+        dueDateFrame = Frame(dateFrame)
+        Label(dueDateFrame, text = "Due Date:").pack(side = LEFT)
+        Entry(dueDateFrame, textvariable = dueDate_Month, width = 2).pack(side = LEFT)
+        Label(dueDateFrame, text = "/").pack(side = LEFT)
+        Entry(dueDateFrame, textvariable = dueDate_Day, width = 2).pack(side = LEFT)
+        Label(dueDateFrame, text = "/").pack(side = LEFT)
+        Entry(dueDateFrame, textvariable = dueDate_Year, width = 4).pack(side = LEFT)
+        dueDateFrame.pack(side = RIGHT)
+        
+        creationDateFrame = Frame(dateFrame)
+        Label(creationDateFrame, text = "Creation Date:").pack(side = LEFT)
+        Entry(creationDateFrame, textvariable = creationDate_Month, width = 2).pack(side = LEFT)
+        Label(creationDateFrame, text = "/").pack(side = LEFT)
+        Entry(creationDateFrame, textvariable = creationDate_Day, width = 2).pack(side = LEFT)
+        Label(creationDateFrame, text = "/").pack(side = LEFT)
+        Entry(creationDateFrame, textvariable = creationDate_Year, width = 4).pack(side = LEFT)
+        creationDateFrame.pack(side = RIGHT)
+        
+        dateFrame.pack()
+        
+        customerFrame = Frame(standardInfoFrame)
+        Label(customerFrame, text = "Customer:").pack(side = LEFT)
+        Entry(customerFrame).pack(side = LEFT)
+        customerFrame.pack()
+        
+        standardInfoFrame.pack()      
+        
         self.jobOptions = ["Laser/WaterJet", "Bending", "Welding", "Powder Coating"]
-        self.numOfSubFrames = 5
+        self.numOfSubFrames = 4
         self.dropDownVariables = []
         
         self.blankFrameFlags = [True] * self.numOfSubFrames
@@ -171,17 +232,15 @@ class CreateWOScreen(Frame):
             self.dropDownVariables[i].set(self.jobOptions[0])
             self.dropDownVariables[i].trace("w", self.RaiseSubFrame)
         
-        
-
-        #self.frames = [[]] * self.numOfSubFrames
-        self.frames = [[],[],[],[],[]]
+        self.frames = []
+        for i in range(self.numOfSubFrames):
+            self.frames.append([])
         contentFrame = Frame(self)
         contentFrame.pack(side = LEFT, fill = "both", expand = True)
-        contentFrame.grid_rowconfigure(self.numOfSubFrames, weight = 1)
-        contentFrame.grid_columnconfigure(1, weight = 1)
+        #contentFrame.grid_rowconfigure(self.numOfSubFrames, weight = 1)
+        #contentFrame.grid_columnconfigure(1, weight = 1)
         count = 0
         for i in range(self.numOfSubFrames):
-            
             for F in (CuttingSubScreen,
                        BendingSubScreen,
                        WeldingSubScreen,
@@ -189,7 +248,7 @@ class CreateWOScreen(Frame):
                        BlankSubScreen):
                 frame = F(contentFrame, self, count)
                 self.frames[i].append(frame)
-                frame.grid(row = i, column = 0, sticky = "nsew")
+                frame.grid(row = i, column = 0, sticky = "nesw")
             count += 1
 
         self.blankFrameFlags[0] = False
@@ -240,49 +299,153 @@ class CreateWOScreen(Frame):
 
 class CuttingSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
-        Frame.__init__(self, parent)
+        Frame.__init__(self, parent, pady = 2, bg = 'black', bd = 2)
         
         frame = Frame(self) 
         self.dropDownText = StringVar(self)
         self.dropDownText.set(controller.jobOptions[0])
         self.dropDownText.trace("w", controller.RaiseSubFrame)
-              
+
+        self.currentMaterial = StringVar(self)
+        self.currentThickness = StringVar(self)
         
-        Label(frame, text = "Cutting").pack(side = LEFT)
-        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = LEFT)
-        frame.pack(fill = X, expand = True)
+        self.currentMaterial.trace('w', self.UpdateThicknessChart)
+        
+        self.materialDrop = OptionMenu(frame, self.currentMaterial, *Work_Order.materialDictionary.keys())
+        self.thicknessDrop = OptionMenu(frame, self.currentThickness, ' ')
+        
+        self.currentMaterial.set('Mild Steel')
+        
+        self.materialDrop.pack(side = LEFT)
+        self.thicknessDrop.pack(side = LEFT)
+        
+        
+        
+        ##Label(frame, text = "Cutting").pack(side = LEFT)
+        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = RIGHT, fill = Y)
+        
+        self.NoteString = StringVar()
+        self.FileLocationString = StringVar()
+
+        
+        
+        notesFrame = Frame(self)
+        Label(notesFrame, text = "Notes:").pack(side = LEFT)
+        Entry(notesFrame, textvariable = self.NoteString).pack(side = LEFT)
+        
+        hyperlinkFrame = Frame(self)
+        Label(hyperlinkFrame, text = "File Location:").pack(side = LEFT)
+        Entry(hyperlinkFrame, textvariable = self.NoteString).pack(side = LEFT)
+        
+        frame.pack(expand = True, fill = X)
+        notesFrame.pack(side = LEFT)
+        hyperlinkFrame.pack(side = LEFT)
+        
+        
+        
+    def UpdateThicknessChart(self, *args):
+        temp = Work_Order.materialDictionary[self.currentMaterial.get()]
+        self.currentThickness.set(temp[0])
+        menu = self.thicknessDrop['menu']
+        menu.delete(0, 'end')
+        
+        for i in temp:
+            menu.add_command(label=i, command = lambda: self.currentThickness.set(i)) 
 
 class BendingSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
-        Frame.__init__(self, parent)
+        Frame.__init__(self, parent, pady = 2, bg = 'red', bd = 2)
         
-        frame = Frame(self)        
+        frame = Frame(self) 
+        self.dropDownText = StringVar(self)
+        self.dropDownText.set(controller.jobOptions[0])
+        self.dropDownText.trace("w", controller.RaiseSubFrame)
         
-        Label(frame, text = "Bending").pack(side = LEFT)
-        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = LEFT)
-        frame.pack(fill = X, expand = True)
+        
+        ##Label(frame, text = "Cutting").pack(side = LEFT)
+        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = RIGHT, fill = Y)
+        
+        self.NoteString = StringVar()
+        self.FileLocationString = StringVar()
 
+        
+        
+        notesFrame = Frame(self)
+        Label(notesFrame, text = "Notes:").pack(side = LEFT)
+        Entry(notesFrame, textvariable = self.NoteString).pack(side = LEFT)
+        
+        hyperlinkFrame = Frame(self)
+        Label(hyperlinkFrame, text = "File Location:").pack(side = LEFT)
+        Entry(hyperlinkFrame, textvariable = self.NoteString).pack(side = LEFT)
+        
+        frame.pack(expand = True, fill = X)
+        notesFrame.pack(side = LEFT)
+        hyperlinkFrame.pack(side = LEFT)
+        
 class WeldingSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
-        Frame.__init__(self, parent)
+        Frame.__init__(self, parent, pady = 2, bg = 'green', bd = 2)
         
-        frame = Frame(self)        
+        frame = Frame(self) 
+        self.dropDownText = StringVar(self)
+        self.dropDownText.set(controller.jobOptions[0])
+        self.dropDownText.trace("w", controller.RaiseSubFrame)
         
-        Label(frame, text = "Welding").pack(side = LEFT)
-        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = LEFT)
-        frame.pack(fill = X, expand = True)
+        
+        ##Label(frame, text = "Cutting").pack(side = LEFT)
+        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = RIGHT, fill = Y)
+        
+        self.NoteString = StringVar()
+        self.FileLocationString = StringVar()
+
+        
+        
+        notesFrame = Frame(self)
+        Label(notesFrame, text = "Notes:").pack(side = LEFT)
+        Entry(notesFrame, textvariable = self.NoteString).pack(side = LEFT)
+        
+        hyperlinkFrame = Frame(self)
+        Label(hyperlinkFrame, text = "File Location:").pack(side = LEFT)
+        Entry(hyperlinkFrame, textvariable = self.NoteString).pack(side = LEFT)
+        
+        frame.pack(expand = True, fill = X)
+        notesFrame.pack(side = LEFT)
+        hyperlinkFrame.pack(side = LEFT)
 
 class PowderCoatingSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
-        Frame.__init__(self, parent)
+        Frame.__init__(self, parent, pady = 2, bg = 'blue', bd = 2)
         
-        frame = Frame(self)        
+        frame = Frame(self) 
+        self.dropDownText = StringVar(self)
+        self.dropDownText.set(controller.jobOptions[0])
+        self.dropDownText.trace("w", controller.RaiseSubFrame)
         
-        Label(frame, text = "Powder Coating").pack(side = LEFT)
-        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = LEFT)
-        frame.pack(fill = X, expand = True)
-
-
+        
+        ##Label(frame, text = "Cutting").pack(side = LEFT)
+        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = RIGHT, fill = Y)
+        
+        self.colorSelection = StringVar()
+        self.colorSelection.set(Work_Order.powderCoatColors[0])
+        self.NoteString = StringVar()
+        self.FileLocationString = StringVar()
+        
+        colorFrame = Frame(frame)
+        Label(colorFrame, text = "Color:").pack(side = LEFT)
+        OptionMenu(colorFrame, self.colorSelection, *Work_Order.powderCoatColors).pack(side = LEFT)
+        colorFrame.pack(side = LEFT)
+        
+        notesFrame = Frame(self)
+        Label(notesFrame, text = "Notes:").pack(side = LEFT)
+        Entry(notesFrame, textvariable = self.NoteString).pack(side = LEFT)
+        
+        hyperlinkFrame = Frame(self)
+        Label(hyperlinkFrame, text = "File Location:").pack(side = LEFT)
+        Entry(hyperlinkFrame, textvariable = self.NoteString).pack(side = LEFT)
+        
+        frame.pack(expand = True, fill = X)
+        notesFrame.pack(side = LEFT)
+        hyperlinkFrame.pack(side = LEFT)
 
 class BlankSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
@@ -304,7 +467,7 @@ class LoginScreen(Frame):
         
         userNames = []
         for i in Users.users:
-            userNames.append(i.GetName())
+            userNames.append(i.name)
         menuButton = OptionMenu(userNameFrame, menuButtonString, *userNames)
         menuButton.pack(side = LEFT, fill = 'x', expand = True)
         userNameFrame.pack(fill = X)
@@ -323,8 +486,7 @@ class LoginScreen(Frame):
         
 
         Label(self, textvariable = self.errorLabelText).pack()
-        
-        
+
             
 class AdminScreen(Frame):
     def __init__(self, parent, controller):

@@ -19,3 +19,9 @@ class WorkOrder:
     def AddStakholder(self, user):
         self.stakeholder.append(user)
         
+
+materialDictionary = {'Mild Steel': ['1 gauge','2 gauge','3 gauge'],
+                       'Aluminum': ['4 gauge','5 gauge','6 gauge']}
+                           
+                           
+powderCoatColors = ["01 - Burly Man Orange", "Assorted"]
