@@ -163,65 +163,93 @@ class CreateWOScreen(Frame):
         Frame.__init__(self, parent)
         
         defaultDueDateDelta = 7
+        self.numOfSubFrames = 4
         
         
-        creationDate_Day = IntVar(self)
-        creationDate_Month = IntVar(self)
-        creationDate_Year = IntVar(self)
+        self.creationDate_Day   = IntVar(self)
+        self.creationDate_Month = IntVar(self)
+        self.creationDate_Year  = IntVar(self)
         
-        dueDate_Day   = IntVar(self)
-        dueDate_Month = IntVar(self)
-        dueDate_Year  = IntVar(self)
+        self.dueDate_Day        = IntVar(self)
+        self.dueDate_Month      = IntVar(self)
+        self.dueDate_Year       = IntVar(self)
+        
+        self.quantity           = IntVar(self)
+        self.quantity.set(1)
+        
+        self.jobTitle           = StringVar(self)
+        self.customer           = StringVar(self)
+        self.notes              = StringVar(self)
+        self.customer.set(Work_Order.customers[0])
         
         creationDate = date.today()
         day = creationDate.day
         month = creationDate.month
         year = creationDate.year
         
-        creationDate_Day.set(day)
-        creationDate_Month.set(month)
-        creationDate_Year.set(year)
+        self.creationDate_Day.set(day)
+        self.creationDate_Month.set(month)
+        self.creationDate_Year.set(year)
         
         defaultDueDate = creationDate + timedelta(days = defaultDueDateDelta)
         
-        dueDate_Day.set(defaultDueDate.day)
-        dueDate_Month.set(defaultDueDate.month)
-        dueDate_Year.set(defaultDueDate.year)
+        self.dueDate_Day.set(defaultDueDate.day)
+        self.dueDate_Month.set(defaultDueDate.month)
+        self.dueDate_Year.set(defaultDueDate.year)
         
         standardInfoFrame = Frame(self, pady = 3, padx = 5)
+        titleFrame        = Frame(standardInfoFrame)
+        dateFrame         = Frame(standardInfoFrame)
+        dueDateFrame      = Frame(dateFrame, padx = 4)
+        creationDateFrame = Frame(dateFrame, padx = 4)
+        middleRowFrame    = Frame(standardInfoFrame)
+        customerFrame     = Frame(middleRowFrame)
+        quantityFrame     = Frame(middleRowFrame)
+        notesFrame        = Frame(standardInfoFrame)
         
-        Label(standardInfoFrame, text = "Job Number: %s" % (jobNumber)).pack(side = LEFT)
+        #Label(standardInfoFrame, text = "Job Number: %s" % (jobNumber)).pack(side = LEFT)
         
-        dateFrame = Frame(standardInfoFrame)
-        dueDateFrame = Frame(dateFrame)
-        Label(dueDateFrame, text = "Due Date:").pack(side = LEFT)
-        Entry(dueDateFrame, textvariable = dueDate_Month, width = 2).pack(side = LEFT)
-        Label(dueDateFrame, text = "/").pack(side = LEFT)
-        Entry(dueDateFrame, textvariable = dueDate_Day, width = 2).pack(side = LEFT)
-        Label(dueDateFrame, text = "/").pack(side = LEFT)
-        Entry(dueDateFrame, textvariable = dueDate_Year, width = 4).pack(side = LEFT)
-        dueDateFrame.pack(side = RIGHT)
+        Label(titleFrame, text = "Job Title:").pack(side = LEFT)
+        Entry(titleFrame, textvariable = self.jobTitle).pack(side = LEFT, fill = X, expand = True)
         
-        creationDateFrame = Frame(dateFrame)
         Label(creationDateFrame, text = "Creation Date:").pack(side = LEFT)
-        Entry(creationDateFrame, textvariable = creationDate_Month, width = 2).pack(side = LEFT)
+        Entry(creationDateFrame, textvariable = self.creationDate_Month, width = 2).pack(side = LEFT)
         Label(creationDateFrame, text = "/").pack(side = LEFT)
-        Entry(creationDateFrame, textvariable = creationDate_Day, width = 2).pack(side = LEFT)
+        Entry(creationDateFrame, textvariable = self.creationDate_Day, width = 2).pack(side = LEFT)
         Label(creationDateFrame, text = "/").pack(side = LEFT)
-        Entry(creationDateFrame, textvariable = creationDate_Year, width = 4).pack(side = LEFT)
-        creationDateFrame.pack(side = RIGHT)
+        Entry(creationDateFrame, textvariable = self.creationDate_Year, width = 4).pack(side = LEFT)
+                
+        Label(dueDateFrame, text = "Due Date:").pack(side = LEFT)
+        Entry(dueDateFrame, textvariable = self.dueDate_Month, width = 2).pack(side = LEFT)
+        Label(dueDateFrame, text = "/").pack(side = LEFT)
+        Entry(dueDateFrame, textvariable = self.dueDate_Day, width = 2).pack(side = LEFT)
+        Label(dueDateFrame, text = "/").pack(side = LEFT)
+        Entry(dueDateFrame, textvariable = self.dueDate_Year, width = 4).pack(side = LEFT)
+
         
-        dateFrame.pack()
-        
-        customerFrame = Frame(standardInfoFrame)
+
         Label(customerFrame, text = "Customer:").pack(side = LEFT)
-        Entry(customerFrame).pack(side = LEFT)
-        customerFrame.pack()
+        OptionMenu(customerFrame, self.customer, *Work_Order.customers).pack(side = LEFT)
         
-        standardInfoFrame.pack()      
+        Label(quantityFrame, text = "Quantity:").pack(side = LEFT)
+        Entry(quantityFrame, textvariable = self.quantity).pack(side = LEFT)
+        
+        Label(notesFrame, text = "Notes:").pack(side = LEFT)
+        Entry(notesFrame, textvariable = self.notes).pack(side = LEFT, fill = X, expand = True)
+        
+        
+        creationDateFrame.pack(side = RIGHT)
+        dueDateFrame.pack(side = RIGHT)
+        titleFrame.pack(fill = X, expand = True)        
+        dateFrame.pack()
+        customerFrame.pack(side = LEFT)
+        quantityFrame.pack(side = RIGHT)
+        middleRowFrame.pack(fill  = X)
+        notesFrame.pack(fill = X)
+        standardInfoFrame.pack(fill = X, expand = True)      
         
         self.jobOptions = ["Laser/WaterJet", "Bending", "Welding", "Powder Coating"]
-        self.numOfSubFrames = 4
+        
         self.dropDownVariables = []
         
         self.blankFrameFlags = [True] * self.numOfSubFrames
@@ -335,7 +363,7 @@ class CuttingSubScreen(Frame):
         
         hyperlinkFrame = Frame(self)
         Label(hyperlinkFrame, text = "File Location:").pack(side = LEFT)
-        Entry(hyperlinkFrame, textvariable = self.NoteString).pack(side = LEFT)
+        Entry(hyperlinkFrame, textvariable = self.FileLocationString).pack(side = LEFT)
         
         frame.pack(expand = True, fill = X)
         notesFrame.pack(side = LEFT)
@@ -350,7 +378,7 @@ class CuttingSubScreen(Frame):
         menu.delete(0, 'end')
         
         for i in temp:
-            menu.add_command(label=i, command = lambda: self.currentThickness.set(i)) 
+            menu.add_command(label=i, command = lambda thickness = i: self.currentThickness.set(thickness)) 
 
 class BendingSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
@@ -376,7 +404,7 @@ class BendingSubScreen(Frame):
         
         hyperlinkFrame = Frame(self)
         Label(hyperlinkFrame, text = "File Location:").pack(side = LEFT)
-        Entry(hyperlinkFrame, textvariable = self.NoteString).pack(side = LEFT)
+        Entry(hyperlinkFrame, textvariable = self.FileLocationString).pack(side = LEFT)
         
         frame.pack(expand = True, fill = X)
         notesFrame.pack(side = LEFT)
@@ -406,7 +434,7 @@ class WeldingSubScreen(Frame):
         
         hyperlinkFrame = Frame(self)
         Label(hyperlinkFrame, text = "File Location:").pack(side = LEFT)
-        Entry(hyperlinkFrame, textvariable = self.NoteString).pack(side = LEFT)
+        Entry(hyperlinkFrame, textvariable = self.FileLocationString).pack(side = LEFT)
         
         frame.pack(expand = True, fill = X)
         notesFrame.pack(side = LEFT)
@@ -441,7 +469,7 @@ class PowderCoatingSubScreen(Frame):
         
         hyperlinkFrame = Frame(self)
         Label(hyperlinkFrame, text = "File Location:").pack(side = LEFT)
-        Entry(hyperlinkFrame, textvariable = self.NoteString).pack(side = LEFT)
+        Entry(hyperlinkFrame, textvariable = self.FileLocationString).pack(side = LEFT)
         
         frame.pack(expand = True, fill = X)
         notesFrame.pack(side = LEFT)
