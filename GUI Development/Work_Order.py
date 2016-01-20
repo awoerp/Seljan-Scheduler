@@ -21,7 +21,9 @@ class WorkOrder:
         
 
 materialDictionary = {'Mild Steel': ['1 gauge','2 gauge','3 gauge'],
-                       'Aluminum': ['4 gauge','5 gauge','6 gauge']}
+                      'Aluminum': ['4 gauge','5 gauge','6 gauge']}
                            
                            
 powderCoatColors = ["01 - Burly Man Orange", "Assorted"]
+
+customers = ["Harvard", "Trek", "Jame","Utility Trailors"]
