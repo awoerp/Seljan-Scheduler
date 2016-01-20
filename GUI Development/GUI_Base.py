@@ -25,6 +25,7 @@ class Application(Tk):
             self.title("Seljan Scheduler")
             
             self.currentUser = None
+            self.currentWorkOrders = []
             
             # Initiallizing Top Menu Buttons and the frame that they go in.
             self.topButtons = []
@@ -162,10 +163,11 @@ class CreateWOScreen(Frame):
     def __init__(self, parent, controller):
         Frame.__init__(self, parent)
         
+        self.controller = controller
         defaultDueDateDelta = 7
         self.numOfSubFrames = 4
         
-        
+        ##### Standard Info Area ############
         self.creationDate_Day   = IntVar(self)
         self.creationDate_Month = IntVar(self)
         self.creationDate_Year  = IntVar(self)
@@ -193,6 +195,8 @@ class CreateWOScreen(Frame):
         
         defaultDueDate = creationDate + timedelta(days = defaultDueDateDelta)
         
+        self.dueDate = defaultDueDate
+        
         self.dueDate_Day.set(defaultDueDate.day)
         self.dueDate_Month.set(defaultDueDate.month)
         self.dueDate_Year.set(defaultDueDate.year)
@@ -207,7 +211,6 @@ class CreateWOScreen(Frame):
         quantityFrame     = Frame(middleRowFrame)
         notesFrame        = Frame(standardInfoFrame)
         
-        #Label(standardInfoFrame, text = "Job Number: %s" % (jobNumber)).pack(side = LEFT)
         
         Label(titleFrame, text = "Job Title:").pack(side = LEFT)
         Entry(titleFrame, textvariable = self.jobTitle).pack(side = LEFT, fill = X, expand = True)
@@ -248,8 +251,10 @@ class CreateWOScreen(Frame):
         notesFrame.pack(fill = X)
         standardInfoFrame.pack(fill = X, expand = True)      
         
-        self.jobOptions = ["Laser/WaterJet", "Bending", "Welding", "Powder Coating"]
+        #########################################################
         
+        
+        ############ Content (Steps) Area  #####################   
         self.dropDownVariables = []
         
         self.blankFrameFlags = [True] * self.numOfSubFrames
@@ -257,16 +262,18 @@ class CreateWOScreen(Frame):
         
         for i in range(self.numOfSubFrames):
             self.dropDownVariables.append(StringVar(self))
-            self.dropDownVariables[i].set(self.jobOptions[0])
+            self.dropDownVariables[i].set(Work_Order.jobOptions[0])
             self.dropDownVariables[i].trace("w", self.RaiseSubFrame)
         
+        
+        # The following for loop creates an array of empty arrays
         self.frames = []
         for i in range(self.numOfSubFrames):
             self.frames.append([])
+            
         contentFrame = Frame(self)
         contentFrame.pack(side = LEFT, fill = "both", expand = True)
-        #contentFrame.grid_rowconfigure(self.numOfSubFrames, weight = 1)
-        #contentFrame.grid_columnconfigure(1, weight = 1)
+
         count = 0
         for i in range(self.numOfSubFrames):
             for F in (CuttingSubScreen,
@@ -281,18 +288,21 @@ class CreateWOScreen(Frame):
 
         self.blankFrameFlags[0] = False
         self.RaiseSubFrame()
+        ##########################################################
         
-        AddStepFrame = Frame(self)        
-        Button(AddStepFrame, text = "Add Step", command = self.AddStep).pack()
-        Button(AddStepFrame, text = "Remove Step", command = self.RemoveStep).pack()
-        AddStepFrame.pack(side = LEFT)
+        controlButtonFrame = Frame(self)        
+        Button(controlButtonFrame, text = "Add Step", command = self.AddStep).pack()
+        Button(controlButtonFrame, text = "Remove Step", command = self.RemoveStep).pack()
+        Label(controlButtonFrame).pack()
+        Button(controlButtonFrame, text = "Create Work Order", command = self.CreateWorkOrder).pack()
+        controlButtonFrame.pack(side = LEFT)
                         
                 
     def RaiseSubFrame(self, *args):
         for i in range(self.numOfSubFrames):
             # We don't want to update the frames which should stay blank
             if self.blankFrameFlags[i] is False:
-                frameToShow = self.jobOptions.index(self.dropDownVariables[i].get())
+                frameToShow = Work_Order.jobOptions.index(self.dropDownVariables[i].get())
                 self.frames[i][frameToShow].tkraise()
             else:
                 # Show the blank Frame
@@ -322,6 +332,11 @@ class CreateWOScreen(Frame):
 
             self.numActiveFrames -= 1                   
             self.RaiseSubFrame()
+            
+    def CreateWorkOrder(self):
+        workOrder = Work_Order.WorkOrder(self, self.controller.currentUser)
+        self.controller.currentWorkOrders.append(workOrder)
+        print(self.controller.currentWorkOrders)
         
         
 
@@ -329,9 +344,11 @@ class CuttingSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
         Frame.__init__(self, parent, pady = 2, bg = 'black', bd = 2)
         
+        self.frameType = Work_Order.jobOptions[0]
+        
         frame = Frame(self) 
         self.dropDownText = StringVar(self)
-        self.dropDownText.set(controller.jobOptions[0])
+        self.dropDownText.set(Work_Order.jobOptions[0])
         self.dropDownText.trace("w", controller.RaiseSubFrame)
 
         self.currentMaterial = StringVar(self)
@@ -347,10 +364,7 @@ class CuttingSubScreen(Frame):
         self.materialDrop.pack(side = LEFT)
         self.thicknessDrop.pack(side = LEFT)
         
-        
-        
-        ##Label(frame, text = "Cutting").pack(side = LEFT)
-        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = RIGHT, fill = Y)
+        OptionMenu(frame, controller.dropDownVariables[variableIndex], *Work_Order.jobOptions).pack(side = RIGHT, fill = Y)
         
         self.NoteString = StringVar()
         self.FileLocationString = StringVar()
@@ -369,7 +383,7 @@ class CuttingSubScreen(Frame):
         notesFrame.pack(side = LEFT)
         hyperlinkFrame.pack(side = LEFT)
         
-        
+        self.pack(fill = X, expand = True)
         
     def UpdateThicknessChart(self, *args):
         temp = Work_Order.materialDictionary[self.currentMaterial.get()]
@@ -383,15 +397,17 @@ class CuttingSubScreen(Frame):
 class BendingSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
         Frame.__init__(self, parent, pady = 2, bg = 'red', bd = 2)
-        
+
+        self.frameType = Work_Order.jobOptions[1]        
+                        
         frame = Frame(self) 
         self.dropDownText = StringVar(self)
-        self.dropDownText.set(controller.jobOptions[0])
+        self.dropDownText.set(Work_Order.jobOptions[0])
         self.dropDownText.trace("w", controller.RaiseSubFrame)
         
         
         ##Label(frame, text = "Cutting").pack(side = LEFT)
-        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = RIGHT, fill = Y)
+        OptionMenu(frame, controller.dropDownVariables[variableIndex], *Work_Order.jobOptions).pack(side = RIGHT, fill = Y)
         
         self.NoteString = StringVar()
         self.FileLocationString = StringVar()
@@ -413,15 +429,17 @@ class BendingSubScreen(Frame):
 class WeldingSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
         Frame.__init__(self, parent, pady = 2, bg = 'green', bd = 2)
-        
+
+        self.frameType = Work_Order.jobOptions[2]        
+                        
         frame = Frame(self) 
         self.dropDownText = StringVar(self)
-        self.dropDownText.set(controller.jobOptions[0])
+        self.dropDownText.set(Work_Order.jobOptions[0])
         self.dropDownText.trace("w", controller.RaiseSubFrame)
         
         
         ##Label(frame, text = "Cutting").pack(side = LEFT)
-        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = RIGHT, fill = Y)
+        OptionMenu(frame, controller.dropDownVariables[variableIndex], *Work_Order.jobOptions).pack(side = RIGHT, fill = Y)
         
         self.NoteString = StringVar()
         self.FileLocationString = StringVar()
@@ -443,15 +461,17 @@ class WeldingSubScreen(Frame):
 class PowderCoatingSubScreen(Frame):
     def __init__(self, parent, controller, variableIndex):
         Frame.__init__(self, parent, pady = 2, bg = 'blue', bd = 2)
-        
+
+        self.frameType = Work_Order.jobOptions[3]        
+                        
         frame = Frame(self) 
         self.dropDownText = StringVar(self)
-        self.dropDownText.set(controller.jobOptions[0])
+        self.dropDownText.set(Work_Order.jobOptions[0])
         self.dropDownText.trace("w", controller.RaiseSubFrame)
         
         
         ##Label(frame, text = "Cutting").pack(side = LEFT)
-        OptionMenu(frame, controller.dropDownVariables[variableIndex], *controller.jobOptions).pack(side = RIGHT, fill = Y)
+        OptionMenu(frame, controller.dropDownVariables[variableIndex], *Work_Order.jobOptions).pack(side = RIGHT, fill = Y)
         
         self.colorSelection = StringVar()
         self.colorSelection.set(Work_Order.powderCoatColors[0])
