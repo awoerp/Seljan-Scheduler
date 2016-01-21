@@ -26,6 +26,8 @@ class Application(Tk):
 
         self.currentUser = None
         self.currentWorkOrders = []
+        
+        self.iconbitmap(r"C:\Users\Andy\Desktop\Programs\Python\Seljan-Scheduler\GUI Development\Clarisse.ico")
 
         # Initializing Top Menu Buttons and the frame that they go in.
         self.topButtons = []
