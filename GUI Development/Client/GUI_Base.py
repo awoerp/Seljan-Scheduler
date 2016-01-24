@@ -2,8 +2,17 @@ from Tkinter import *
 import Users
 import Work_Order
 from datetime import date, timedelta
+from Command_Codes import codes
+from cPickle import dumps, loads
+import socket
+import time
 
 jobNumber = 1928
+
+HOST = "localhost"
+PORT = 6000
+SERVER_ADDRESS = (HOST, PORT)
+BUFF_SIZE = 1024
 
 
 class E_Screens:
@@ -24,7 +33,7 @@ class Application(Tk):
         Tk.__init__(self, *args, **kwargs)
         self.title("Seljan Scheduler")
 
-        self.currentUser = None
+        self.currentUser = Users.User("", Users.E_UserTypes.Blank, "")
         self.currentWorkOrders = []
         
         self.iconbitmap(r"C:\Users\Andy\Desktop\Programs\Python\Seljan-Scheduler\GUI Development\Client\Clarisse.ico")
@@ -127,6 +136,77 @@ class Application(Tk):
         else:
             errorLabelText.set("Incorrect Password Entered")
             password.set("")
+
+    def LeaveLoginScreen(self, password, userName, errorLabelText, menuButtonString):
+
+        # The default value for "userName" is "Choose a User"
+        # so if this is still the same value, we don't want to
+        # send a request to the server.
+        if userName == "Choose a User":
+            errorLabelText.set("Please Select a User")
+        else:
+            serializedMessage = self.ConstructPickledMessage(codes["LoginRequest"], userName, password.get())
+            serializedResponse = self.Send_RecieveMessage(serializedMessage)
+
+            message = loads(serializedResponse)
+            print(message)
+            if message != "":
+                self.currentUser = message
+                for button in self.topButtons:
+                    button.config(state=NORMAL)
+                self.EnterScreen(1)
+            else:
+                errorLabelText.set("Incorrect Password Entered")
+                password.set("")
+
+
+    def RequestUsernameList(self):
+        message = self.ConstructPickledMessage(codes["UsernameListRequest"])
+        serialized_Response = self.Send_RecieveMessage(message)
+        Users.userNames = loads(serialized_Response)
+
+
+    def ConstructPickledMessage(self, messageCode, *args):
+        message = []
+        if type(messageCode) is str:
+            message.append(messageCode)
+        else:
+            message.append(str(messageCode))
+
+        message.append(self.currentUser.name)
+
+        for argument in args:
+            if type(argument) is str:
+                message.append(argument)
+            else:
+                pickledArg = dumps(argument, -1)
+                message.append(pickledArg)
+
+        serializedMessage = dumps(message)
+        return serializedMessage
+
+    def SendMessage(self, message):
+        clientSocket = socket.socket()
+        clientSocket.connect(SERVER_ADDRESS)
+        clientSocket.send(message)
+        return clientSocket
+
+    def RecieveMessage(self, clientSocket):
+        return clientSocket.recv(BUFF_SIZE)
+
+    def Send_RecieveMessage(self, message):
+        """
+        This method will send a serialized message and return the
+        response from the server.
+        :param message:
+        :return <serialized response from server>:
+        """
+        return self.RecieveMessage(self.SendMessage(message))
+
+
+
+
+
 
 
 class CurrentJobsScreen(Frame):
@@ -330,7 +410,7 @@ class CreateWOScreen(Frame):
     def CreateWorkOrder(self):
         workOrder = Work_Order.WorkOrder(self, self.controller.currentUser)
         self.controller.currentWorkOrders.append(workOrder)
-        print(self.controller.currentWorkOrders)
+
 
 
 class CuttingSubScreen(Frame):
@@ -499,9 +579,9 @@ class LoginScreen(Frame):
         menuButtonString = StringVar(self)
         menuButtonString.set("Choose a User")
 
-        userNames = []
-        for i in Users.users:
-            userNames.append(i.name)
+        controller.RequestUsernameList()
+        userNames = Users.userNames
+
         menuButton = OptionMenu(userNameFrame, menuButtonString, *userNames)
         menuButton.pack(side=LEFT, fill='x', expand=True)
         userNameFrame.pack(fill=X)
