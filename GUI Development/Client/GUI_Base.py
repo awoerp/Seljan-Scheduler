@@ -5,7 +5,7 @@ from datetime import date, timedelta
 from Command_Codes import codes
 from cPickle import dumps, loads
 import socket
-import time
+
 
 jobNumber = 1928
 
@@ -149,7 +149,6 @@ class Application(Tk):
             serializedResponse = self.Send_RecieveMessage(serializedMessage)
 
             message = loads(serializedResponse)
-            print(message)
             if message != "":
                 self.currentUser = message
                 for button in self.topButtons:
@@ -162,8 +161,12 @@ class Application(Tk):
 
     def RequestUsernameList(self):
         message = self.ConstructPickledMessage(codes["UsernameListRequest"])
-        serialized_Response = self.Send_RecieveMessage(message)
-        Users.userNames = loads(serialized_Response)
+        serializedResponse = self.Send_RecieveMessage(message)
+        Users.userNames = loads(serializedResponse)
+
+    def CreateWorkOrderRequest(self, newWorkOrder):
+        message = self.ConstructPickledMessage(codes["WorkOrderCreationRequest"], newWorkOrder)
+        serializedResponse = self.Send_RecieveMessage(message)
 
 
     def ConstructPickledMessage(self, messageCode, *args):
@@ -179,7 +182,7 @@ class Application(Tk):
             if type(argument) is str:
                 message.append(argument)
             else:
-                pickledArg = dumps(argument, -1)
+                pickledArg = dumps(argument)
                 message.append(pickledArg)
 
         serializedMessage = dumps(message)
@@ -408,9 +411,9 @@ class CreateWOScreen(Frame):
             self.RaiseSubFrame()
 
     def CreateWorkOrder(self):
-        workOrder = Work_Order.WorkOrder(self, self.controller.currentUser)
-        self.controller.currentWorkOrders.append(workOrder)
-
+        newworkOrder = Work_Order.WorkOrder(self, self.controller.currentUser)
+        serializedWorkOrder = dumps(newworkOrder)
+        self.controller.CreateWorkOrderRequest(serializedWorkOrder)
 
 
 class CuttingSubScreen(Frame):

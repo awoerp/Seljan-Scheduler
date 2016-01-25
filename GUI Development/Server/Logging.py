@@ -22,6 +22,9 @@ class Log:
         self.logFile.write(message)
         self.logFile.flush()
 
+    def NewLine(self):
+        self.logFile.write("\n")
+        self.logFile.flush()
     def Close(self):
         self.logFile.close()
 

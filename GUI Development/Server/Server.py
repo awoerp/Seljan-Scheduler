@@ -37,8 +37,9 @@ class RequestHandler(SRH):
     """
     def handle(self):
 
-        log.WriteToLog("Connection from: " + str(self.client_address))
         log.NewLine()
+        log.WriteToLog("Connection from: " + str(self.client_address))
+
         self.serializedMessage = self.request.recv(1024)
         self.message = loads(self.serializedMessage)
         self.messageType = self.message[0]
@@ -63,7 +64,7 @@ class RequestHandler(SRH):
             serializedUserNameList = dumps(usernameList)
             self.SendMessage(serializedUserNameList)
             log.WriteToLog("UserNameList Requested")
-            log.WriteToLog("Session with %s closed" % str(self.client_address))
+
 
 
         # Client is requesting user password authentication on login screen.
@@ -76,19 +77,26 @@ class RequestHandler(SRH):
             for user in users.users:
                 if user.name == userName:
                     targetedUser = user
+                    log.WriteToLog("LoginRequest for %s" % (targetedUser.name))
+                    log.WriteToLog("Given Password: %s" % (password))
             if targetedUser.password == password:
                 serializedUser = dumps(targetedUser)
                 self.SendMessage(serializedUser)
+                log.WriteToLog("Login was successful")
             else:
                 self.SendMessage(dumps(""))
+                log.WriteToLog("Password was incorrect")
 
         # Client is requesting the creation of a new work order.
         # message[2] = <WorkOrder Object>
-        elif self.message == codes["WorkOrderCreationRequest"]:
+        elif self.messageType == codes["WorkOrderCreationRequest"]:
             serializedNewWorkOrder =  self.message[2]
+            print(serializedNewWorkOrder)
             newWorkOrder = loads(serializedNewWorkOrder)
 
 
+
+        log.WriteToLog("Session with %s closed" % str(self.client_address))
 
 
     def SendMessage(self, message):
