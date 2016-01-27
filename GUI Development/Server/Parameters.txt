@@ -1,0 +1,2 @@
+7	Current Number of Jobs
+1024	Number of bytes that are recieved in a message

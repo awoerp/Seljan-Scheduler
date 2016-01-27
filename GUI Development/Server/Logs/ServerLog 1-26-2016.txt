@@ -1,0 +1,187 @@
+2016-01-26 08:25:45.001000: Server Stated
+
+2016-01-26 08:25:47.336000: Connection from: ('127.0.0.1', 51308)
+2016-01-26 08:25:47.336000: UserNameList Requested
+2016-01-26 08:25:47.336000: Session with ('127.0.0.1', 51308) closed
+
+2016-01-26 08:25:50.204000: Connection from: ('127.0.0.1', 51310)
+2016-01-26 08:25:50.204000: LoginRequest for Dummy
+2016-01-26 08:25:50.204000: Given Password: 
+2016-01-26 08:25:50.204000: Login was successful
+2016-01-26 08:25:50.204000: Session with ('127.0.0.1', 51310) closed
+
+2016-01-26 08:25:52.731000: Connection from: ('127.0.0.1', 51312)
+2016-01-26 08:25:52.732000: Connection as: Dummy
+2016-01-26 08:25:52.785000: Session with ('127.0.0.1', 51312) closed
+2016-01-26 21:18:16.186000: Server Stated
+2016-01-26 21:18:25.688000: Server Stated
+2016-01-26 21:21:47.821000: Server Stated
+
+2016-01-26 21:21:51.369000: Connection from: ('127.0.0.1', 53304)
+2016-01-26 21:21:51.370000: UserNameList Requested
+2016-01-26 21:21:51.370000: Session with ('127.0.0.1', 53304) closed
+
+2016-01-26 21:21:53.748000: Connection from: ('127.0.0.1', 53305)
+2016-01-26 21:21:53.748000: LoginRequest for Dummy
+2016-01-26 21:21:53.748000: Given Password: 
+2016-01-26 21:21:53.748000: Login was successful
+2016-01-26 21:21:53.748000: Session with ('127.0.0.1', 53305) closed
+
+2016-01-26 21:21:55.475000: Connection from: ('127.0.0.1', 53306)
+2016-01-26 21:21:55.475000: Connection as: Dummy
+
+2016-01-26 21:22:07.070000: Connection from: ('127.0.0.1', 53307)
+
+2016-01-26 21:22:15.632000: Connection from: ('127.0.0.1', 53308)
+2016-01-26 21:23:40.093000: Server Stated
+
+2016-01-26 21:23:45.596000: Connection from: ('127.0.0.1', 53312)
+2016-01-26 21:23:45.597000: UserNameList Requested
+2016-01-26 21:23:45.597000: Session with ('127.0.0.1', 53312) closed
+
+2016-01-26 21:23:49.431000: Connection from: ('127.0.0.1', 53314)
+2016-01-26 21:23:49.431000: LoginRequest for Andy Woerpel
+2016-01-26 21:23:49.431000: Given Password: cats
+2016-01-26 21:23:49.431000: Login was successful
+2016-01-26 21:23:49.431000: Session with ('127.0.0.1', 53314) closed
+
+2016-01-26 21:23:50.963000: Connection from: ('127.0.0.1', 53315)
+2016-01-26 21:23:50.963000: Connection as: Andy Woerpel
+2016-01-26 21:23:50.964000: Session with ('127.0.0.1', 53315) closed
+2016-01-26 21:24:07.161000: Server Stated
+
+2016-01-26 21:24:14.842000: Connection from: ('127.0.0.1', 53320)
+2016-01-26 21:24:14.843000: UserNameList Requested
+2016-01-26 21:24:14.843000: Session with ('127.0.0.1', 53320) closed
+
+2016-01-26 21:24:17.056000: Connection from: ('127.0.0.1', 53321)
+2016-01-26 21:24:17.056000: LoginRequest for Dummy
+2016-01-26 21:24:17.057000: Given Password: 
+2016-01-26 21:24:17.057000: Login was successful
+2016-01-26 21:24:17.057000: Session with ('127.0.0.1', 53321) closed
+
+2016-01-26 21:24:20.273000: Connection from: ('127.0.0.1', 53322)
+2016-01-26 21:24:20.273000: Connection as: Dummy
+2016-01-26 21:25:59.782000: Server Stated
+
+2016-01-26 21:26:02.999000: Connection from: ('127.0.0.1', 53323)
+2016-01-26 21:26:02.999000: UserNameList Requested
+2016-01-26 21:26:02.999000: Session with ('127.0.0.1', 53323) closed
+
+2016-01-26 21:26:05.216000: Connection from: ('127.0.0.1', 53324)
+2016-01-26 21:26:05.216000: LoginRequest for Dummy
+2016-01-26 21:26:05.216000: Given Password: 
+2016-01-26 21:26:05.216000: Login was successful
+2016-01-26 21:26:05.216000: Session with ('127.0.0.1', 53324) closed
+
+2016-01-26 21:26:07.534000: Connection from: ('127.0.0.1', 53325)
+2016-01-26 21:26:07.534000: Connection as: Dummy
+2016-01-26 21:26:07.538000: Session with ('127.0.0.1', 53325) closed
+2016-01-26 21:26:59.804000: Server Stated
+
+2016-01-26 21:27:06.452000: Connection from: ('127.0.0.1', 53331)
+2016-01-26 21:27:06.452000: UserNameList Requested
+2016-01-26 21:27:06.452000: Session with ('127.0.0.1', 53331) closed
+
+2016-01-26 21:27:08.783000: Connection from: ('127.0.0.1', 53332)
+2016-01-26 21:27:08.783000: LoginRequest for Dummy
+2016-01-26 21:27:08.783000: Given Password: 
+2016-01-26 21:27:08.783000: Login was successful
+2016-01-26 21:27:08.783000: Session with ('127.0.0.1', 53332) closed
+
+2016-01-26 21:27:11.873000: Connection from: ('127.0.0.1', 53333)
+2016-01-26 21:27:11.873000: Connection as: Dummy
+2016-01-26 21:27:11.879000: Session with ('127.0.0.1', 53333) closed
+
+2016-01-26 21:27:41.862000: Connection from: ('127.0.0.1', 53336)
+2016-01-26 21:27:41.862000: Connection as: Dummy
+2016-01-26 21:27:41.868000: Session with ('127.0.0.1', 53336) closed
+2016-01-26 21:28:29.519000: Server Stated
+2016-01-26 21:31:56.080000: Server Stated
+
+2016-01-26 21:32:04.458000: Connection from: ('127.0.0.1', 53365)
+2016-01-26 21:32:04.458000: UserNameList Requested
+2016-01-26 21:32:04.458000: Session with ('127.0.0.1', 53365) closed
+
+2016-01-26 21:32:10.514000: Connection from: ('127.0.0.1', 53366)
+2016-01-26 21:32:10.514000: LoginRequest for Dummy
+2016-01-26 21:32:10.514000: Given Password: 
+2016-01-26 21:32:10.514000: Login was successful
+2016-01-26 21:32:10.514000: Session with ('127.0.0.1', 53366) closed
+
+2016-01-26 21:32:39.566000: Connection from: ('127.0.0.1', 53367)
+2016-01-26 21:32:39.566000: Connection as: Dummy
+2016-01-26 21:32:39.570000: Session with ('127.0.0.1', 53367) closed
+2016-01-26 21:34:10.567000: Server Stated
+
+2016-01-26 21:34:19.959000: Connection from: ('127.0.0.1', 53385)
+2016-01-26 21:34:19.959000: UserNameList Requested
+2016-01-26 21:34:19.959000: Session with ('127.0.0.1', 53385) closed
+
+2016-01-26 21:34:23.254000: Connection from: ('127.0.0.1', 53386)
+2016-01-26 21:34:23.254000: LoginRequest for Dummy
+2016-01-26 21:34:23.254000: Given Password: 
+2016-01-26 21:34:23.255000: Login was successful
+2016-01-26 21:34:23.255000: Session with ('127.0.0.1', 53386) closed
+2016-01-26 21:35:24.462000: Server Stated
+
+2016-01-26 21:35:27.004000: Connection from: ('127.0.0.1', 53395)
+2016-01-26 21:35:27.004000: UserNameList Requested
+2016-01-26 21:35:27.004000: Session with ('127.0.0.1', 53395) closed
+
+2016-01-26 21:35:29.608000: Connection from: ('127.0.0.1', 53396)
+2016-01-26 21:35:29.608000: LoginRequest for Dummy
+2016-01-26 21:35:29.608000: Given Password: 
+2016-01-26 21:35:29.608000: Login was successful
+2016-01-26 21:35:29.608000: Session with ('127.0.0.1', 53396) closed
+
+2016-01-26 21:36:36.197000: Connection from: ('127.0.0.1', 53402)
+2016-01-26 21:36:36.197000: UserNameList Requested
+2016-01-26 21:36:36.197000: Session with ('127.0.0.1', 53402) closed
+
+2016-01-26 21:36:38.792000: Connection from: ('127.0.0.1', 53404)
+2016-01-26 21:36:38.792000: LoginRequest for Dummy
+2016-01-26 21:36:38.792000: Given Password: 
+2016-01-26 21:36:38.792000: Login was successful
+2016-01-26 21:36:38.792000: Session with ('127.0.0.1', 53404) closed
+
+2016-01-26 21:37:52.683000: Connection from: ('127.0.0.1', 53411)
+2016-01-26 21:37:52.683000: UserNameList Requested
+2016-01-26 21:37:52.683000: Session with ('127.0.0.1', 53411) closed
+
+2016-01-26 21:37:55.058000: Connection from: ('127.0.0.1', 53412)
+2016-01-26 21:37:55.058000: LoginRequest for Dummy
+2016-01-26 21:37:55.058000: Given Password: 
+2016-01-26 21:37:55.058000: Login was successful
+2016-01-26 21:37:55.059000: Session with ('127.0.0.1', 53412) closed
+
+2016-01-26 21:38:15.495000: Connection from: ('127.0.0.1', 53414)
+2016-01-26 21:38:15.495000: Connection as: Dummy
+2016-01-26 21:38:31.071000: Session with ('127.0.0.1', 53414) closed
+2016-01-26 21:39:48.190000: Server Stated
+
+2016-01-26 21:39:50.081000: Connection from: ('127.0.0.1', 53416)
+2016-01-26 21:39:50.081000: UserNameList Requested
+2016-01-26 21:39:50.081000: Session with ('127.0.0.1', 53416) closed
+
+2016-01-26 21:39:54.481000: Connection from: ('127.0.0.1', 53417)
+2016-01-26 21:39:54.481000: LoginRequest for Andy Woerpel
+2016-01-26 21:39:54.481000: Given Password: cats
+2016-01-26 21:39:54.481000: Login was successful
+2016-01-26 21:39:54.481000: Session with ('127.0.0.1', 53417) closed
+
+2016-01-26 21:40:42.638000: Connection from: ('127.0.0.1', 53418)
+
+2016-01-26 21:54:06.060000: Connection from: ('127.0.0.1', 53469)
+2016-01-26 21:54:06.060000: UserNameList Requested
+2016-01-26 21:54:06.060000: Session with ('127.0.0.1', 53469) closed
+
+2016-01-26 21:54:12.442000: Connection from: ('127.0.0.1', 53473)
+2016-01-26 21:54:12.442000: LoginRequest for Clide
+2016-01-26 21:54:12.442000: Given Password: 
+2016-01-26 21:54:12.442000: Login was successful
+2016-01-26 21:54:12.442000: Session with ('127.0.0.1', 53473) closed
+
+2016-01-26 21:54:15.598000: Connection from: ('127.0.0.1', 53475)
+2016-01-26 21:54:15.598000: Connection as: Clide
+2016-01-26 21:54:15.604000: Session with ('127.0.0.1', 53475) closed

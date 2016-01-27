@@ -72,8 +72,8 @@ class WorkOrder:
 class GeneralStep:
     def __init__(self, stepType, stepObject):
         self.stepType = stepType
-        self.notes = str(stepObject.NoteString)
-        self.fileLocation = str(stepObject.FileLocationString)
+        self.notes = str(stepObject.NoteString.get())
+        self.fileLocation = str(stepObject.FileLocationString.get())
         
 class CuttingStep(GeneralStep):
     """
@@ -82,5 +82,5 @@ class CuttingStep(GeneralStep):
     """
     def __init__(self, stepObject):
         GeneralStep.__init__(self, jobOptions[0], stepObject)
-        self.material = str(stepObject.currentMaterial)
-        self.thickness = str(stepObject.currentThickness)
+        self.material = str(stepObject.currentMaterial.get())
+        self.thickness = str(stepObject.currentThickness.get())

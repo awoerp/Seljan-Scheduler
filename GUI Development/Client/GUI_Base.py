@@ -412,8 +412,7 @@ class CreateWOScreen(Frame):
 
     def CreateWorkOrder(self):
         newworkOrder = Work_Order.WorkOrder(self, self.controller.currentUser)
-        serializedWorkOrder = dumps(newworkOrder)
-        self.controller.CreateWorkOrderRequest(serializedWorkOrder)
+        self.controller.CreateWorkOrderRequest(newworkOrder)
 
 
 class CuttingSubScreen(Frame):

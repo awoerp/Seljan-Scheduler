@@ -1,12 +1,36 @@
 from SocketServer import (TCPServer as TCP, StreamRequestHandler as SRH)
 
-import Command_Codes
 from Logging import Log
 from cPickle import loads, dumps
 from Command_Codes import codes
+import Work_Order
 import Users
-import time
 
+
+
+jobNumber = int
+maxMessageSize = int
+
+parameters = [jobNumber, maxMessageSize]
+
+parameterFileName = "Parameters.txt"
+
+paramFile = open(parameterFileName, "r")
+
+count = 0
+for line in paramFile:
+    data = line.split("\t")
+    parameters[0] = int(data[0])
+    count += 1
+del count
+
+paramFile.close()
+
+def UpdateParameters():
+    paramFile = open(parameterFileName, 'w')
+    for data in parameters:
+        paramFile.write(str(data) + "\n")
+    paramFile.close()
 
 HOST = "localhost"
 PORT = 6000
@@ -14,6 +38,8 @@ address = (HOST, PORT)
 
 log = Log()
 users = Users.Users()
+currentWorkOrders = Work_Order.CurrentWorkOrders()
+currentWorkOrders.LoadExistingOrders()
 
 class RequestHandler(SRH):
     """
@@ -91,8 +117,12 @@ class RequestHandler(SRH):
         # message[2] = <WorkOrder Object>
         elif self.messageType == codes["WorkOrderCreationRequest"]:
             serializedNewWorkOrder =  self.message[2]
-            print(serializedNewWorkOrder)
             newWorkOrder = loads(serializedNewWorkOrder)
+            newWorkOrder.jobNumber = parameters[0]
+            currentWorkOrders.AddWorkOrder(newWorkOrder)
+            parameters[0] += 1 # Increase "jobNumber" by 1
+
+            UpdateParameters() # Saves the new job number in ROM
 
 
 

@@ -193,3 +193,20 @@
 
 2016-01-25 09:14:32.609000: Connection from: ('127.0.0.1', 58314)
 2016-01-25 09:14:32.609000: Connection as: Andy Woerpel
+2016-01-25 16:11:23.262000: Server Stated
+
+2016-01-25 16:11:30.985000: Connection from: ('127.0.0.1', 59401)
+2016-01-25 16:11:30.986000: UserNameList Requested
+2016-01-25 16:11:30.986000: Session with ('127.0.0.1', 59401) closed
+
+2016-01-25 16:12:30.085000: Connection from: ('127.0.0.1', 59403)
+2016-01-25 16:12:30.086000: LoginRequest for Andy Woerpel
+2016-01-25 16:12:30.086000: Given Password: c
+2016-01-25 16:12:30.086000: Password was incorrect
+2016-01-25 16:12:30.086000: Session with ('127.0.0.1', 59403) closed
+
+2016-01-25 16:12:46.858000: Connection from: ('127.0.0.1', 59404)
+2016-01-25 16:12:46.858000: LoginRequest for Andy Woerpel
+2016-01-25 16:12:46.858000: Given Password: cats
+2016-01-25 16:12:46.859000: Login was successful
+2016-01-25 16:12:46.859000: Session with ('127.0.0.1', 59404) closed

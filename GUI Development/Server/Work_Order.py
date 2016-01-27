@@ -1,3 +1,7 @@
+from os import getcwd, chdir, listdir
+from cPickle import dumps, loads
+
+
 
 class E_State():
     __slots__ = ("Scheduled", "In Progress", "Complete")
@@ -12,6 +16,50 @@ materialDictionary = {'Mild Steel': ['1 gauge','2 gauge','3 gauge'],
 powderCoatColors = ["01 - Burly Man Orange", "Assorted"]
 customers = ["Harvard", "Trek", "Jame","Utility Trailers"]
 jobOptions = ["Laser/WaterJet", "Bending", "Welding", "Powder Coating"]
+
+class CurrentWorkOrders:
+    def __init__(self):
+        self.workOrders = []
+
+    def LoadExistingOrders(self):
+        cwd = getcwd()
+        chdir("CurrentWorkOrders")
+        for file in listdir(getcwd()):
+            workOrderFile = open(file, 'r')
+            serializedWorkOrder = ""
+            for line in workOrderFile:
+                serializedWorkOrder += line
+
+            loadedWorkOrder = loads(serializedWorkOrder)
+            self.workOrders.append(loadedWorkOrder)
+
+            workOrderFile.close()
+        chdir(cwd)
+
+    def AddWorkOrder(self, order):
+        self.workOrders.append(order)
+        self.Save()
+
+
+    def Save(self):
+        """
+        This method saves/resaves all of the work order objects within
+        self.workOrders[].
+        :return:
+        """
+        cwd = getcwd()
+        chdir("CurrentWorkOrders")
+
+        for order in self.workOrders:
+            order.Save()
+
+        chdir(cwd)
+
+
+
+
+
+
 
 class WorkOrder:
     def __init__(self,
@@ -31,6 +79,7 @@ class WorkOrder:
         self.note = controller.notes.get()
         self.steps = []
         self.state = E_State.Scheduled
+        self.jobNumber = int
 
 
         # This "for loop" will iterate over an array of booleans
@@ -62,14 +111,21 @@ class WorkOrder:
 
             count += 1
 
+    def Save(self):
+        serializedObject = dumps(self)
+        outFile = open(str(self.jobNumber) + ".txt", 'w')
+        outFile.write(serializedObject)
+        outFile.close()
+
+
 
 
 
 class GeneralStep:
     def __init__(self, stepType, stepObject):
         self.stepType = stepType
-        self.notes = stepObject.NoteString
-        self.fileLocation = stepObject.FileLocationString
+        self.notes = str(stepObject.NoteString.get())
+        self.fileLocation = str(stepObject.FileLocationString.get())
 
 class CuttingStep(GeneralStep):
     """
@@ -78,5 +134,5 @@ class CuttingStep(GeneralStep):
     """
     def __init__(self, stepObject):
         GeneralStep.__init__(self, jobOptions[0], stepObject)
-        self.material = stepObject.currentMaterial
-        self.thickness = stepObject.currentThickness
+        self.material = str(stepObject.currentMaterial.get())
+        self.thickness = str(stepObject.currentThickness.get())
