@@ -2,17 +2,7 @@ from Tkinter import *
 import Users
 import Work_Order
 from datetime import date, timedelta
-from Command_Codes import codes
-from cPickle import dumps, loads
-import socket
-
-
-jobNumber = 1928
-
-HOST = "localhost"
-PORT = 6000
-SERVER_ADDRESS = (HOST, PORT)
-BUFF_SIZE = 1024
+import ServerComms
 
 
 class E_Screens:
@@ -27,13 +17,14 @@ class E_Screens:
     CreateOrderScreen = 3
     AdminScreen = 4
 
+serverComms = ServerComms.ServerComs()
+
 
 class Application(Tk):
     def __init__(self, *args, **kwargs):
         Tk.__init__(self, *args, **kwargs)
         self.title("Seljan Scheduler")
 
-        self.currentUser = Users.User("", Users.E_UserTypes.Blank, "")
         self.currentWorkOrders = []
         
         self.iconbitmap(r"C:\Users\Andy\Desktop\Programs\Python\Seljan-Scheduler\GUI Development\Client\Clarisse.ico")
@@ -102,40 +93,20 @@ class Application(Tk):
         for b in self.topButtons:
             b.config(relief=RAISED)
 
-        if self.currentUser.CreateWorkOrder == False:
+        if Users.currentUser.CreateWorkOrder == False:
             self.topButtons[2].config(state=DISABLED)
 
-        if self.currentUser.Admin == False:
+        if Users.currentUser.Admin == False:
             self.topButtons[3].config(state=DISABLED)
 
     def ShowFrame(self, screenNumber):
         self.frames[screenNumber].tkraise()
 
     def SetCurrentUser(self, user):
-        self.currentUser = user
+        Users.currentUser = user
 
     def GetCurrentUser(self):
-        return self.currentUser
-
-    def LeaveLoginScreen(self, password, userName, errorLabelText, menuButtonString):
-        for i in Users.users:
-            if (i.name == userName):
-                self.SetCurrentUser(i)
-
-        if self.currentUser is None:
-            errorLabelText.set("Please Select a User")
-
-        elif password == "" and self.currentUser is not Users.Dummy:
-            errorLabelText.set("Please Enter the Correct Password")
-        elif password.get() == self.currentUser.GetPassword():
-            for button in self.topButtons:
-                button.config(state=NORMAL)
-                password.set("")
-                menuButtonString.set("Choose A User")
-            self.EnterScreen(1)
-        else:
-            errorLabelText.set("Incorrect Password Entered")
-            password.set("")
+        return Users.currentUser
 
     def LeaveLoginScreen(self, password, userName, errorLabelText, menuButtonString):
 
@@ -145,70 +116,17 @@ class Application(Tk):
         if userName == "Choose a User":
             errorLabelText.set("Please Select a User")
         else:
-            serializedMessage = self.ConstructPickledMessage(codes["LoginRequest"], userName, password.get())
-            serializedResponse = self.Send_RecieveMessage(serializedMessage)
+            response = serverComms.Login(userName, password.get())
 
-            message = loads(serializedResponse)
-            if message != "":
-                self.currentUser = message
+
+            if response != "":
+                Users.currentUser = response
                 for button in self.topButtons:
                     button.config(state=NORMAL)
                 self.EnterScreen(1)
             else:
                 errorLabelText.set("Incorrect Password Entered")
                 password.set("")
-
-
-    def RequestUsernameList(self):
-        message = self.ConstructPickledMessage(codes["UsernameListRequest"])
-        serializedResponse = self.Send_RecieveMessage(message)
-        Users.userNames = loads(serializedResponse)
-
-    def CreateWorkOrderRequest(self, newWorkOrder):
-        message = self.ConstructPickledMessage(codes["WorkOrderCreationRequest"], newWorkOrder)
-        serializedResponse = self.Send_RecieveMessage(message)
-
-
-    def ConstructPickledMessage(self, messageCode, *args):
-        message = []
-        if type(messageCode) is str:
-            message.append(messageCode)
-        else:
-            message.append(str(messageCode))
-
-        message.append(self.currentUser.name)
-
-        for argument in args:
-            if type(argument) is str:
-                message.append(argument)
-            else:
-                pickledArg = dumps(argument)
-                message.append(pickledArg)
-
-        serializedMessage = dumps(message)
-        return serializedMessage
-
-    def SendMessage(self, message):
-        clientSocket = socket.socket()
-        clientSocket.connect(SERVER_ADDRESS)
-        clientSocket.send(message)
-        return clientSocket
-
-    def RecieveMessage(self, clientSocket):
-        return clientSocket.recv(BUFF_SIZE)
-
-    def Send_RecieveMessage(self, message):
-        """
-        This method will send a serialized message and return the
-        response from the server.
-        :param message:
-        :return <serialized response from server>:
-        """
-        return self.RecieveMessage(self.SendMessage(message))
-
-
-
-
 
 
 
@@ -411,8 +329,8 @@ class CreateWOScreen(Frame):
             self.RaiseSubFrame()
 
     def CreateWorkOrder(self):
-        newworkOrder = Work_Order.WorkOrder(self, self.controller.currentUser)
-        self.controller.CreateWorkOrderRequest(newworkOrder)
+        newworkOrder = Work_Order.WorkOrder(self, Users.currentUser)
+        serverComms.CreateWorkOrderRequest(newworkOrder)
 
 
 class CuttingSubScreen(Frame):
@@ -581,7 +499,7 @@ class LoginScreen(Frame):
         menuButtonString = StringVar(self)
         menuButtonString.set("Choose a User")
 
-        controller.RequestUsernameList()
+        serverComms.RequestUsernameList(Users.currentUser)
         userNames = Users.userNames
 
         menuButton = OptionMenu(userNameFrame, menuButtonString, *userNames)

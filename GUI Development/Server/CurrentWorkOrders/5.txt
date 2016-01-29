@@ -58,28 +58,26 @@ p23
 (dp24
 S'notes'
 p25
-S'adsf asdf'
-p26
+S''
 sS'material'
-p27
+p26
 S'Mild Steel'
-p28
+p27
 sS'fileLocation'
-p29
-S'asdf asdf'
-p30
+p28
+S''
 sS'stepType'
-p31
+p29
 S'Laser/WaterJet'
-p32
+p30
 sS'thickness'
-p33
+p31
 S'1 gauge'
-p34
+p32
 sbasS'jobNumber'
-p35
+p33
 I5
 sS'quantity'
-p36
+p34
 S'1'
 sb.

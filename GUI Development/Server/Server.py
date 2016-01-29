@@ -1,45 +1,29 @@
 from SocketServer import (TCPServer as TCP, StreamRequestHandler as SRH)
 
 from Logging import Log
-from cPickle import loads, dumps
+from cPickle import loads
 from Command_Codes import codes
 import Work_Order
 import Users
+import Parameters
+import ServerFunctions
 
-
-
-jobNumber = int
-maxMessageSize = int
-
-parameters = [jobNumber, maxMessageSize]
-
-parameterFileName = "Parameters.txt"
-
-paramFile = open(parameterFileName, "r")
-
-count = 0
-for line in paramFile:
-    data = line.split("\t")
-    parameters[0] = int(data[0])
-    count += 1
-del count
-
-paramFile.close()
-
-def UpdateParameters():
-    paramFile = open(parameterFileName, 'w')
-    for data in parameters:
-        paramFile.write(str(data) + "\n")
-    paramFile.close()
 
 HOST = "localhost"
 PORT = 6000
 address = (HOST, PORT)
 
 log = Log()
+
 users = Users.Users()
+
 currentWorkOrders = Work_Order.CurrentWorkOrders()
 currentWorkOrders.LoadExistingOrders()
+
+parameters = Parameters.ParameterManager()
+parameters.LoadSettings()
+
+serverFunctions = ServerFunctions.ServerFunctions(log, users, parameters, currentWorkOrders)
 
 class RequestHandler(SRH):
     """
@@ -63,10 +47,11 @@ class RequestHandler(SRH):
     """
     def handle(self):
 
+        serverFunctions.SetHandler(self)
         log.NewLine()
         log.WriteToLog("Connection from: " + str(self.client_address))
 
-        self.serializedMessage = self.request.recv(1024)
+        self.serializedMessage = self.request.recv(parameters.parameters["MAX_RECEIVE_SIZE"])
         self.message = loads(self.serializedMessage)
         self.messageType = self.message[0]
 
@@ -83,15 +68,7 @@ class RequestHandler(SRH):
         # Client is requesting the usernames for all of the users in the system.
         # This will likely be used on the main login screen for the user drop down menu.
         if self.messageType == codes["UsernameListRequest"]:
-            usernameList = []
-            for user in users.users:
-                usernameList.append(user.name)
-
-            serializedUserNameList = dumps(usernameList)
-            self.SendMessage(serializedUserNameList)
-            log.WriteToLog("UserNameList Requested")
-
-
+            serverFunctions.SendUserNameList()
 
         # Client is requesting user password authentication on login screen.
         # message[2] = <userName>
@@ -99,31 +76,18 @@ class RequestHandler(SRH):
         elif self.messageType == codes["LoginRequest"]:
             userName = self.message[2]
             password = self.message[3]
-
-            for user in users.users:
-                if user.name == userName:
-                    targetedUser = user
-                    log.WriteToLog("LoginRequest for %s" % (targetedUser.name))
-                    log.WriteToLog("Given Password: %s" % (password))
-            if targetedUser.password == password:
-                serializedUser = dumps(targetedUser)
-                self.SendMessage(serializedUser)
-                log.WriteToLog("Login was successful")
-            else:
-                self.SendMessage(dumps(""))
-                log.WriteToLog("Password was incorrect")
+            serverFunctions.Login(userName, password)
 
         # Client is requesting the creation of a new work order.
         # message[2] = <WorkOrder Object>
         elif self.messageType == codes["WorkOrderCreationRequest"]:
             serializedNewWorkOrder =  self.message[2]
-            newWorkOrder = loads(serializedNewWorkOrder)
-            newWorkOrder.jobNumber = parameters[0]
-            currentWorkOrders.AddWorkOrder(newWorkOrder)
-            parameters[0] += 1 # Increase "jobNumber" by 1
+            serverFunctions.CreateWorkOrder(serializedNewWorkOrder)
 
-            UpdateParameters() # Saves the new job number in ROM
-
+        # This method returns the Recieve buffer size which is specified
+        # in the parameters file.
+        elif self.messageType == codes["BufferSizeRequest"]:
+            serverFunctions.SendReceiveBufferSize()
 
 
         log.WriteToLog("Session with %s closed" % str(self.client_address))

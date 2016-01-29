@@ -76,7 +76,7 @@ S'1 gauge'
 p32
 sbasS'jobNumber'
 p33
-I6
+I3
 sS'quantity'
 p34
 S'1'

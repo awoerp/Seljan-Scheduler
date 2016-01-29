@@ -20,7 +20,7 @@ p8
 (dp9
 S'name'
 p10
-S'Dummy'
+S'Clide'
 p11
 sS'ExecuteWorkOrder'
 p12
@@ -76,7 +76,7 @@ S'1 gauge'
 p32
 sbasS'jobNumber'
 p33
-I6
+I1024
 sS'quantity'
 p34
 S'1'
