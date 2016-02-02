@@ -2,6 +2,7 @@ import socket
 from cPickle import dumps, loads
 from Command_Codes import codes
 import Users
+from sys import getsizeof
 
 INITIAL_BUFFER_SIZE = 1024
 
@@ -10,18 +11,50 @@ class ServerComs():
         self.host = "localhost"
         self.port = 6000
         self.serverAddress = (self.host, self.port)
-        self.bufferSize = INITIAL_BUFFER_SIZE
-        self.bufferSize = self.Send_RecieveMessage(codes["BufferSizeRequest"])
+
+
+    def RequestUsernameList(self, currentUser):
+        Users.userNames = self.Send_RecieveMessage(codes["UsernameListRequest"])
+
+    def Login(self, userName, password):
+        return self.Send_RecieveMessage(codes["LoginRequest"], userName, password)
+
+    def CreateWorkOrderRequest(self, newWorkOrder):
+        response = self.Send_RecieveMessage(codes["WorkOrderCreationRequest"], newWorkOrder)
+
+        if response == codes["False"]:
+            pass
+
+
+    def RequestCurrentJobs(self):
+        return self.Send_RecieveMessage(codes["CurrentWorkOrdersRequest"])
+
+
+
+
+
+
+
+
+
+
+
+################## Low Level Methods ######################################################
 
     def SendMessage(self, messageCode, args):
         clientSocket = socket.socket()
         clientSocket.connect(self.serverAddress)
         message = self.ConstructPickledMessage(messageCode, args)
-        clientSocket.send(message)
+        messageSize = format(len(message), '04x') # the number of characters is the same as the number of Bytes in a message
+
+        clientSocket.send("0x" + messageSize + message)
         return clientSocket
 
-    def RecieveMessage(self, clientSocket):
-        serializedResponse = clientSocket.recv(self.bufferSize)
+    def RecieveMessage(self, clientSocket, **kargs):
+
+        incommingMessageSize =  int(clientSocket.recv(6), 16)
+
+        serializedResponse = clientSocket.recv(incommingMessageSize + 500)
         return loads(serializedResponse)
 
     def Send_RecieveMessage(self, messageCode, *args):
@@ -52,11 +85,31 @@ class ServerComs():
         serializedMessage = dumps(message)
         return serializedMessage
 
-    def RequestUsernameList(self, currentUser):
-        Users.userNames = self.Send_RecieveMessage(codes["UsernameListRequest"])
 
-    def Login(self, userName, password):
-        return self.Send_RecieveMessage(codes["LoginRequest"], userName, password)
 
-    def CreateWorkOrderRequest(self, newWorkOrder):
-        response = self.Send_RecieveMessage(codes["WorkOrderCreationRequest"], newWorkOrder)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

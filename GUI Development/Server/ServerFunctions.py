@@ -1,5 +1,7 @@
 from cPickle import dumps, loads
 
+from Command_Codes import codes
+
 
 class ServerFunctions():
     def __init__(self, log, users, parameters, currentWorkOrders):
@@ -28,24 +30,39 @@ class ServerFunctions():
             self.Send(targetedUser)
             self.log.WriteToLog("Login was successful")
         else:
-            self.Send("")  # TODO: This should send back a negative response not ""
+            self.Send("")  # TODO: This should send back a negative response not
             self.log.WriteToLog("Password was incorrect")
 
     def CreateWorkOrder(self, serializedNewWorkOrder):
-        newWorkOrder = loads(serializedNewWorkOrder)
+        self.log.WriteToLog("Work Order Creation Attempt")
+        try:
+            newWorkOrder = loads(serializedNewWorkOrder)
 
-        newWorkOrder.jobNumber = self.parameters.parameters["jobNumber"]
-        self.currentWorkOrders.AddWorkOrder(newWorkOrder)
-        self.parameters.parameters["jobNumber"] += 1 # Increase "jobNumber" by 1
+            newWorkOrder.jobNumber = self.parameters.parameters["jobNumber"]
+            self.currentWorkOrders.AddWorkOrder(newWorkOrder)
+            self.parameters.parameters["jobNumber"] += 1 # Increase "jobNumber" by 1
+            self.Send(codes["True"])
+            self.parameters.UpdateParameters() # Saves the new job number in ROM
+            self.log.WriteToLog("Successfully created work order: %s" % str(newWorkOrder.jobNumber))
+        except:
+            self.log.WriteToLog("Error: Could not create work order")
+            self.Send(codes["False"])
 
-        self.parameters.UpdateParameters() # Saves the new job number in ROM
 
-    def SendReceiveBufferSize(self):
-        self.Send(self.parameters.parameters["MAX_RECEIVE_SIZE"])
+    def SendCurrentWorkOrdersMessageSize(self, size):
+        self.Send(size)
+        self.log.WriteToLog("Current work orders message size request: %s Bytes" % str(size))
+
+
+
+    def SendCurrentWorkOrders(self, workOrdersArray):
+        self.Send(workOrdersArray)
+        self.log.WriteToLog("Current work orders request")
 
     def SetHandler(self, handler):
         self.handler = handler
 
     def Send(self, message):
         serializedMessage = dumps(message)
-        self.handler.SendMessage(serializedMessage)
+        messageSize = format(len(serializedMessage), '04x')
+        self.handler.SendMessage("0x" + messageSize + serializedMessage)

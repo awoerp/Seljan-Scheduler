@@ -1,2 +1,2 @@
 1024	MAX_RECEIVE_SIZE
-12	jobNumber
+45	jobNumber

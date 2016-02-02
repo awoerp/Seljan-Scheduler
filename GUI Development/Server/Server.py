@@ -49,9 +49,13 @@ class RequestHandler(SRH):
 
         serverFunctions.SetHandler(self)
         log.NewLine()
-        log.WriteToLog("Connection from: " + str(self.client_address))
+        log.WriteToLogWithTimeStamp("Connection from: " + str(self.client_address))
 
-        self.serializedMessage = self.request.recv(parameters.parameters["MAX_RECEIVE_SIZE"])
+        incommingMessageSize =  int(self.request.recv(6), 16)
+
+
+
+        self.serializedMessage = self.request.recv(incommingMessageSize)
         self.message = loads(self.serializedMessage)
         self.messageType = self.message[0]
 
@@ -89,8 +93,15 @@ class RequestHandler(SRH):
         elif self.messageType == codes["BufferSizeRequest"]:
             serverFunctions.SendReceiveBufferSize()
 
+        elif self.messageType == codes["CurrentWorkOrdersMessageSizeRequest"]:
+            serverFunctions.SendCurrentWorkOrdersMessageSize(currentWorkOrders.pickledWorkOrderSize)
 
-        log.WriteToLog("Session with %s closed" % str(self.client_address))
+        elif self.messageType == codes["CurrentWorkOrdersRequest"]:
+            serverFunctions.SendCurrentWorkOrders(currentWorkOrders.workOrders)
+
+
+
+        log.WriteToLogWithTimeStamp("Session with %s closed" % str(self.client_address))
 
 
     def SendMessage(self, message):

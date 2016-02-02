@@ -7,12 +7,14 @@ class E_State():
 
 materialDictionary = {'Mild Steel': ['1 gauge','2 gauge','3 gauge'],
                       'Aluminum': ['4 gauge','5 gauge','6 gauge']}
-                       
+
 powderCoatColors = ["01 - Burly Man Orange", "Assorted"]
-
 customers = ["Harvard", "Trek", "Jame","Utility Trailers"]
-
 jobOptions = ["Laser/WaterJet", "Bending", "Welding", "Powder Coating"]
+
+class CurrentWorkOrders:
+    def __init__(self):
+        pass
 
 class WorkOrder:
     def __init__(self,
@@ -24,13 +26,27 @@ class WorkOrder:
         # variables we want are in the form of Tkinter variables, so
         # it is necessary to use the .get() method to return its int
         # or string value.
+
+        creationDate = str(controller.creationDate_Month.get()) + "-" +\
+                       str(controller.creationDate_Day.get()) + "-" +\
+                       str(controller.creationDate_Year.get())
+
+        dueDate = str(controller.dueDate_Month.get()) + "-" +\
+                  str(controller.dueDate_Day.get()) + "-" +\
+                  str(controller.dueDate_Year.get())
+
+
         self.jobTitle = str(controller.jobTitle.get())
         self.requestor = requestor
         self.customer = str(controller.customer.get())
         self.quantity = str(controller.quantity.get())
         self.note = str(controller.notes.get())
+        self.creationDate = creationDate
+        self.dueDate = dueDate
+
         self.steps = []
         self.state = E_State.Scheduled
+        self.jobNumber = int
         
         
         # This "for loop" will iterate over an array of booleans

@@ -1,4 +1,5 @@
 from os import getcwd, chdir, listdir
+from sys import getsizeof
 from cPickle import dumps, loads
 
 
@@ -20,6 +21,8 @@ jobOptions = ["Laser/WaterJet", "Bending", "Welding", "Powder Coating"]
 class CurrentWorkOrders:
     def __init__(self):
         self.workOrders = []
+        self.pickledWorkOrders = []
+        self.pickledWorkOrderSize = int
 
     def LoadExistingOrders(self):
         cwd = getcwd()
@@ -35,10 +38,17 @@ class CurrentWorkOrders:
 
             workOrderFile.close()
         chdir(cwd)
+        self.UpdatePickledWorkOrders()
+        self.pickledWorkOrderSize = getsizeof(self.pickledWorkOrders)
 
     def AddWorkOrder(self, order):
         self.workOrders.append(order)
         self.Save()
+        self.UpdatePickledWorkOrders()
+
+    def UpdatePickledWorkOrders(self):
+        self.pickledWorkOrders = dumps(self.workOrders)
+        self.pickledWorkOrderSize = getsizeof(self.pickledWorkOrders)
 
 
     def Save(self):

@@ -12,12 +12,19 @@ class Log:
 
         chdir("Logs")
         self.logFile = open("ServerLog %s-%s-%s.txt" % (month, day, year), 'a')
-        self.WriteToLog("Server Stated")
+        self.WriteToLogWithTimeStamp("Server Stated")
         chdir(cwd)
+
+    def WriteToLogWithTimeStamp(self, body):
+        timeStamp = str(datetime.now())
+        message = timeStamp + ": " + body + "\n"
+
+        self.logFile.write(message)
+        self.logFile.flush()
 
     def WriteToLog(self, body):
         timeStamp = str(datetime.now())
-        message = timeStamp + ": " + body + "\n"
+        message = body + "\n"
 
         self.logFile.write(message)
         self.logFile.flush()

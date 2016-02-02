@@ -1,0 +1,1014 @@
+2016-01-31 18:26:06.486000: Server Stated
+
+2016-01-31 18:26:09.133000: Connection from: ('127.0.0.1', 55419)
+2016-01-31 18:26:09.133000: Session with ('127.0.0.1', 55419) closed
+
+2016-01-31 18:26:09.420000: Connection from: ('127.0.0.1', 55420)
+UserNameList Requested
+2016-01-31 18:26:09.420000: Session with ('127.0.0.1', 55420) closed
+
+2016-01-31 18:26:15.193000: Connection from: ('127.0.0.1', 55421)
+LoginRequest for Scott Woerpel
+Given Password: cats
+Login was successful
+2016-01-31 18:26:15.193000: Session with ('127.0.0.1', 55421) closed
+2016-01-31 18:31:03.532000: Server Stated
+2016-01-31 18:31:08.877000: Server Stated
+
+2016-01-31 18:31:11.061000: Connection from: ('127.0.0.1', 55508)
+2016-01-31 18:31:11.061000: Session with ('127.0.0.1', 55508) closed
+
+2016-01-31 18:31:11.129000: Connection from: ('127.0.0.1', 55509)
+UserNameList Requested
+2016-01-31 18:31:11.130000: Session with ('127.0.0.1', 55509) closed
+
+2016-01-31 18:31:13.075000: Connection from: ('127.0.0.1', 55510)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 18:31:13.075000: Session with ('127.0.0.1', 55510) closed
+
+2016-01-31 18:31:35.377000: Connection from: ('127.0.0.1', 55512)
+2016-01-31 18:31:35.377000: Session with ('127.0.0.1', 55512) closed
+
+2016-01-31 18:31:35.451000: Connection from: ('127.0.0.1', 55513)
+UserNameList Requested
+2016-01-31 18:31:35.451000: Session with ('127.0.0.1', 55513) closed
+
+2016-01-31 18:31:37.219000: Connection from: ('127.0.0.1', 55514)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 18:31:37.219000: Session with ('127.0.0.1', 55514) closed
+
+2016-01-31 18:33:24.746000: Connection from: ('127.0.0.1', 55516)
+2016-01-31 18:33:24.746000: Session with ('127.0.0.1', 55516) closed
+
+2016-01-31 18:33:24.833000: Connection from: ('127.0.0.1', 55517)
+UserNameList Requested
+2016-01-31 18:33:24.833000: Session with ('127.0.0.1', 55517) closed
+
+2016-01-31 18:33:27.039000: Connection from: ('127.0.0.1', 55518)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-01-31 18:33:27.039000: Session with ('127.0.0.1', 55518) closed
+
+2016-01-31 18:33:40.010000: Connection from: ('127.0.0.1', 55520)
+2016-01-31 18:33:40.011000: Session with ('127.0.0.1', 55520) closed
+
+2016-01-31 18:33:40.087000: Connection from: ('127.0.0.1', 55521)
+UserNameList Requested
+2016-01-31 18:33:40.087000: Session with ('127.0.0.1', 55521) closed
+
+2016-01-31 18:33:41.963000: Connection from: ('127.0.0.1', 55522)
+LoginRequest for Scott Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 18:33:41.963000: Session with ('127.0.0.1', 55522) closed
+
+2016-01-31 18:33:43.666000: Connection from: ('127.0.0.1', 55523)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 18:33:43.667000: Session with ('127.0.0.1', 55523) closed
+
+2016-01-31 18:34:09.656000: Connection from: ('127.0.0.1', 55524)
+2016-01-31 18:34:09.656000: Session with ('127.0.0.1', 55524) closed
+
+2016-01-31 18:34:09.726000: Connection from: ('127.0.0.1', 55525)
+UserNameList Requested
+2016-01-31 18:34:09.726000: Session with ('127.0.0.1', 55525) closed
+
+2016-01-31 18:34:11.764000: Connection from: ('127.0.0.1', 55526)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 18:34:11.765000: Session with ('127.0.0.1', 55526) closed
+
+2016-01-31 18:40:03.679000: Connection from: ('127.0.0.1', 55545)
+2016-01-31 18:40:03.679000: Session with ('127.0.0.1', 55545) closed
+
+2016-01-31 18:40:03.749000: Connection from: ('127.0.0.1', 55546)
+UserNameList Requested
+2016-01-31 18:40:03.749000: Session with ('127.0.0.1', 55546) closed
+
+2016-01-31 18:40:05.919000: Connection from: ('127.0.0.1', 55547)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 18:40:05.919000: Session with ('127.0.0.1', 55547) closed
+
+2016-01-31 18:40:11.078000: Connection from: ('127.0.0.1', 55549)
+2016-01-31 18:40:11.079000: Session with ('127.0.0.1', 55549) closed
+
+2016-01-31 18:40:11.152000: Connection from: ('127.0.0.1', 55550)
+UserNameList Requested
+2016-01-31 18:40:11.152000: Session with ('127.0.0.1', 55550) closed
+
+2016-01-31 18:40:14.635000: Connection from: ('127.0.0.1', 55551)
+LoginRequest for Andy Woerpel
+Given Password: cats
+Login was successful
+2016-01-31 18:40:14.636000: Session with ('127.0.0.1', 55551) closed
+
+2016-01-31 18:40:50.574000: Connection from: ('127.0.0.1', 55556)
+2016-01-31 18:40:50.575000: Session with ('127.0.0.1', 55556) closed
+
+2016-01-31 18:40:50.682000: Connection from: ('127.0.0.1', 55557)
+UserNameList Requested
+2016-01-31 18:40:50.683000: Session with ('127.0.0.1', 55557) closed
+
+2016-01-31 18:40:57.632000: Connection from: ('127.0.0.1', 55558)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-01-31 18:40:57.632000: Session with ('127.0.0.1', 55558) closed
+
+2016-01-31 18:41:39.602000: Connection from: ('127.0.0.1', 55563)
+2016-01-31 18:41:39.602000: Session with ('127.0.0.1', 55563) closed
+
+2016-01-31 18:41:39.688000: Connection from: ('127.0.0.1', 55564)
+UserNameList Requested
+2016-01-31 18:41:39.689000: Session with ('127.0.0.1', 55564) closed
+
+2016-01-31 18:41:43.380000: Connection from: ('127.0.0.1', 55565)
+LoginRequest for Andy Woerpel
+Given Password: cats
+Login was successful
+2016-01-31 18:41:43.380000: Session with ('127.0.0.1', 55565) closed
+
+2016-01-31 18:42:53.411000: Connection from: ('127.0.0.1', 55569)
+2016-01-31 18:42:53.411000: Session with ('127.0.0.1', 55569) closed
+
+2016-01-31 18:42:53.483000: Connection from: ('127.0.0.1', 55570)
+UserNameList Requested
+2016-01-31 18:42:53.484000: Session with ('127.0.0.1', 55570) closed
+
+2016-01-31 18:42:57.109000: Connection from: ('127.0.0.1', 55571)
+LoginRequest for Andy Woerpel
+Given Password: cats
+Login was successful
+2016-01-31 18:42:57.109000: Session with ('127.0.0.1', 55571) closed
+2016-01-31 19:19:40.885000: Server Stated
+
+2016-01-31 19:19:44.118000: Connection from: ('127.0.0.1', 55692)
+Maximum Message Size Request
+2016-01-31 19:19:44.118000: Session with ('127.0.0.1', 55692) closed
+
+2016-01-31 19:20:15.348000: Connection from: ('127.0.0.1', 55701)
+Maximum Message Size Request
+2016-01-31 19:20:15.348000: Session with ('127.0.0.1', 55701) closed
+
+2016-01-31 19:22:22.156000: Connection from: ('127.0.0.1', 55726)
+Maximum Message Size Request
+2016-01-31 19:22:22.156000: Session with ('127.0.0.1', 55726) closed
+
+2016-01-31 19:22:22.227000: Connection from: ('127.0.0.1', 55727)
+UserNameList Requested
+2016-01-31 19:22:22.228000: Session with ('127.0.0.1', 55727) closed
+
+2016-01-31 19:22:25.036000: Connection from: ('127.0.0.1', 55728)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 19:22:25.036000: Session with ('127.0.0.1', 55728) closed
+2016-01-31 19:38:24.800000: Server Stated
+
+2016-01-31 19:38:29.838000: Connection from: ('127.0.0.1', 55809)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 19:38:29.838000: Session with ('127.0.0.1', 55809) closed
+
+2016-01-31 19:38:29.908000: Connection from: ('127.0.0.1', 55810)
+UserNameList Requested
+2016-01-31 19:38:29.908000: Session with ('127.0.0.1', 55810) closed
+
+2016-01-31 19:38:29.911000: Connection from: ('127.0.0.1', 55811)
+Current work orders message size request: 2914 Bytes
+2016-01-31 19:38:29.911000: Session with ('127.0.0.1', 55811) closed
+
+2016-01-31 19:38:29.912000: Connection from: ('127.0.0.1', 55812)
+Current work orders request
+2016-01-31 19:38:29.912000: Session with ('127.0.0.1', 55812) closed
+
+2016-01-31 19:39:57.900000: Connection from: ('127.0.0.1', 55815)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 19:39:57.900000: Session with ('127.0.0.1', 55815) closed
+
+2016-01-31 19:39:57.967000: Connection from: ('127.0.0.1', 55816)
+UserNameList Requested
+2016-01-31 19:39:57.968000: Session with ('127.0.0.1', 55816) closed
+
+2016-01-31 19:39:57.970000: Connection from: ('127.0.0.1', 55817)
+Current work orders message size request: 2914 Bytes
+2016-01-31 19:39:57.971000: Session with ('127.0.0.1', 55817) closed
+
+2016-01-31 19:40:50.221000: Connection from: ('127.0.0.1', 55822)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 19:40:50.222000: Session with ('127.0.0.1', 55822) closed
+
+2016-01-31 19:40:50.289000: Connection from: ('127.0.0.1', 55823)
+UserNameList Requested
+2016-01-31 19:40:50.289000: Session with ('127.0.0.1', 55823) closed
+
+2016-01-31 19:40:50.294000: Connection from: ('127.0.0.1', 55824)
+Current work orders message size request: 2914 Bytes
+2016-01-31 19:40:50.294000: Session with ('127.0.0.1', 55824) closed
+
+2016-01-31 19:40:50.294000: Connection from: ('127.0.0.1', 55825)
+Current work orders request
+2016-01-31 19:40:50.295000: Session with ('127.0.0.1', 55825) closed
+
+2016-01-31 19:41:16.786000: Connection from: ('127.0.0.1', 55826)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 19:41:16.786000: Session with ('127.0.0.1', 55826) closed
+
+2016-01-31 19:41:16.856000: Connection from: ('127.0.0.1', 55827)
+UserNameList Requested
+2016-01-31 19:41:16.856000: Session with ('127.0.0.1', 55827) closed
+
+2016-01-31 19:41:16.861000: Connection from: ('127.0.0.1', 55828)
+Current work orders message size request: 2914 Bytes
+2016-01-31 19:41:16.861000: Session with ('127.0.0.1', 55828) closed
+
+2016-01-31 19:41:16.862000: Connection from: ('127.0.0.1', 55829)
+Current work orders request
+2016-01-31 19:41:16.862000: Session with ('127.0.0.1', 55829) closed
+
+2016-01-31 19:41:19.669000: Connection from: ('127.0.0.1', 55830)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 19:41:19.670000: Session with ('127.0.0.1', 55830) closed
+2016-01-31 20:32:06.855000: Server Stated
+
+2016-01-31 20:32:08.592000: Connection from: ('127.0.0.1', 56068)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:32:08.592000: Session with ('127.0.0.1', 56068) closed
+
+2016-01-31 20:32:08.660000: Connection from: ('127.0.0.1', 56069)
+UserNameList Requested
+2016-01-31 20:32:08.660000: Session with ('127.0.0.1', 56069) closed
+
+2016-01-31 20:32:08.664000: Connection from: ('127.0.0.1', 56070)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:32:08.664000: Session with ('127.0.0.1', 56070) closed
+
+2016-01-31 20:32:08.664000: Connection from: ('127.0.0.1', 56071)
+Current work orders request
+2016-01-31 20:32:08.665000: Session with ('127.0.0.1', 56071) closed
+
+2016-01-31 20:32:33.786000: Connection from: ('127.0.0.1', 56077)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:32:33.786000: Session with ('127.0.0.1', 56077) closed
+
+2016-01-31 20:32:33.858000: Connection from: ('127.0.0.1', 56078)
+UserNameList Requested
+2016-01-31 20:32:33.858000: Session with ('127.0.0.1', 56078) closed
+
+2016-01-31 20:32:38.841000: Connection from: ('127.0.0.1', 56079)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:32:38.841000: Session with ('127.0.0.1', 56079) closed
+
+2016-01-31 20:32:38.842000: Connection from: ('127.0.0.1', 56080)
+Current work orders request
+2016-01-31 20:32:38.842000: Session with ('127.0.0.1', 56080) closed
+
+2016-01-31 20:33:31.678000: Connection from: ('127.0.0.1', 56085)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:33:31.678000: Session with ('127.0.0.1', 56085) closed
+
+2016-01-31 20:33:31.755000: Connection from: ('127.0.0.1', 56086)
+UserNameList Requested
+2016-01-31 20:33:31.755000: Session with ('127.0.0.1', 56086) closed
+
+2016-01-31 20:33:44.940000: Connection from: ('127.0.0.1', 56087)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:33:44.940000: Session with ('127.0.0.1', 56087) closed
+
+2016-01-31 20:33:48.233000: Connection from: ('127.0.0.1', 56088)
+Current work orders request
+2016-01-31 20:33:48.233000: Session with ('127.0.0.1', 56088) closed
+
+2016-01-31 20:34:04.083000: Connection from: ('127.0.0.1', 56095)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:34:04.083000: Session with ('127.0.0.1', 56095) closed
+
+2016-01-31 20:34:04.158000: Connection from: ('127.0.0.1', 56096)
+UserNameList Requested
+2016-01-31 20:34:04.158000: Session with ('127.0.0.1', 56096) closed
+
+2016-01-31 20:34:07.054000: Connection from: ('127.0.0.1', 56097)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:34:07.054000: Session with ('127.0.0.1', 56097) closed
+
+2016-01-31 20:34:07.717000: Connection from: ('127.0.0.1', 56098)
+Current work orders request
+2016-01-31 20:34:07.717000: Session with ('127.0.0.1', 56098) closed
+
+2016-01-31 20:35:11.557000: Connection from: ('127.0.0.1', 56104)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:35:11.557000: Session with ('127.0.0.1', 56104) closed
+
+2016-01-31 20:35:11.630000: Connection from: ('127.0.0.1', 56105)
+UserNameList Requested
+2016-01-31 20:35:11.631000: Session with ('127.0.0.1', 56105) closed
+
+2016-01-31 20:35:11.634000: Connection from: ('127.0.0.1', 56106)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:35:11.634000: Session with ('127.0.0.1', 56106) closed
+
+2016-01-31 20:35:11.635000: Connection from: ('127.0.0.1', 56107)
+Current work orders request
+2016-01-31 20:35:11.635000: Session with ('127.0.0.1', 56107) closed
+
+2016-01-31 20:35:13.867000: Connection from: ('127.0.0.1', 56108)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-01-31 20:35:13.867000: Session with ('127.0.0.1', 56108) closed
+
+2016-01-31 20:36:25.331000: Connection from: ('127.0.0.1', 56109)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:36:25.331000: Session with ('127.0.0.1', 56109) closed
+
+2016-01-31 20:36:25.406000: Connection from: ('127.0.0.1', 56110)
+UserNameList Requested
+2016-01-31 20:36:25.406000: Session with ('127.0.0.1', 56110) closed
+
+2016-01-31 20:36:25.409000: Connection from: ('127.0.0.1', 56111)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:36:25.409000: Session with ('127.0.0.1', 56111) closed
+
+2016-01-31 20:36:25.410000: Connection from: ('127.0.0.1', 56112)
+Current work orders request
+2016-01-31 20:36:25.410000: Session with ('127.0.0.1', 56112) closed
+
+2016-01-31 20:36:27.554000: Connection from: ('127.0.0.1', 56113)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:36:27.554000: Session with ('127.0.0.1', 56113) closed
+
+2016-01-31 20:39:42.358000: Connection from: ('127.0.0.1', 56124)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:39:42.358000: Session with ('127.0.0.1', 56124) closed
+
+2016-01-31 20:39:42.431000: Connection from: ('127.0.0.1', 56125)
+UserNameList Requested
+2016-01-31 20:39:42.431000: Session with ('127.0.0.1', 56125) closed
+
+2016-01-31 20:39:42.436000: Connection from: ('127.0.0.1', 56126)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:39:42.436000: Session with ('127.0.0.1', 56126) closed
+
+2016-01-31 20:39:42.437000: Connection from: ('127.0.0.1', 56127)
+Current work orders request
+2016-01-31 20:39:42.437000: Session with ('127.0.0.1', 56127) closed
+
+2016-01-31 20:39:44.526000: Connection from: ('127.0.0.1', 56128)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:39:44.527000: Session with ('127.0.0.1', 56128) closed
+
+2016-01-31 20:39:47.079000: Connection from: ('127.0.0.1', 56129)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:39:47.079000: Session with ('127.0.0.1', 56129) closed
+
+2016-01-31 20:39:47.570000: Connection from: ('127.0.0.1', 56130)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:39:47.571000: Session with ('127.0.0.1', 56130) closed
+
+2016-01-31 20:39:51.081000: Connection from: ('127.0.0.1', 56131)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:39:51.081000: Session with ('127.0.0.1', 56131) closed
+
+2016-01-31 20:40:25.763000: Connection from: ('127.0.0.1', 56133)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:40:25.764000: Session with ('127.0.0.1', 56133) closed
+
+2016-01-31 20:40:25.840000: Connection from: ('127.0.0.1', 56134)
+UserNameList Requested
+2016-01-31 20:40:25.840000: Session with ('127.0.0.1', 56134) closed
+
+2016-01-31 20:40:25.843000: Connection from: ('127.0.0.1', 56135)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:40:25.843000: Session with ('127.0.0.1', 56135) closed
+
+2016-01-31 20:40:25.844000: Connection from: ('127.0.0.1', 56136)
+Current work orders request
+2016-01-31 20:40:25.844000: Session with ('127.0.0.1', 56136) closed
+
+2016-01-31 20:40:28.195000: Connection from: ('127.0.0.1', 56137)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:40:28.195000: Session with ('127.0.0.1', 56137) closed
+
+2016-01-31 20:45:25.137000: Connection from: ('127.0.0.1', 56172)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:45:25.137000: Session with ('127.0.0.1', 56172) closed
+
+2016-01-31 20:45:25.209000: Connection from: ('127.0.0.1', 56173)
+UserNameList Requested
+2016-01-31 20:45:25.209000: Session with ('127.0.0.1', 56173) closed
+
+2016-01-31 20:45:25.212000: Connection from: ('127.0.0.1', 56174)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:45:25.212000: Session with ('127.0.0.1', 56174) closed
+
+2016-01-31 20:45:25.213000: Connection from: ('127.0.0.1', 56175)
+Current work orders request
+2016-01-31 20:45:25.213000: Session with ('127.0.0.1', 56175) closed
+
+2016-01-31 20:45:29.344000: Connection from: ('127.0.0.1', 56176)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:45:29.344000: Session with ('127.0.0.1', 56176) closed
+
+2016-01-31 20:46:32.466000: Connection from: ('127.0.0.1', 56179)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:46:32.466000: Session with ('127.0.0.1', 56179) closed
+
+2016-01-31 20:46:32.537000: Connection from: ('127.0.0.1', 56180)
+UserNameList Requested
+2016-01-31 20:46:32.537000: Session with ('127.0.0.1', 56180) closed
+
+2016-01-31 20:46:32.542000: Connection from: ('127.0.0.1', 56181)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:46:32.542000: Session with ('127.0.0.1', 56181) closed
+
+2016-01-31 20:46:32.542000: Connection from: ('127.0.0.1', 56182)
+Current work orders request
+2016-01-31 20:46:32.543000: Session with ('127.0.0.1', 56182) closed
+
+2016-01-31 20:46:35.367000: Connection from: ('127.0.0.1', 56183)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:46:35.367000: Session with ('127.0.0.1', 56183) closed
+
+2016-01-31 20:46:37.307000: Connection from: ('127.0.0.1', 56184)
+
+2016-01-31 20:47:39.722000: Connection from: ('127.0.0.1', 56186)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:47:39.723000: Session with ('127.0.0.1', 56186) closed
+
+2016-01-31 20:47:39.792000: Connection from: ('127.0.0.1', 56187)
+UserNameList Requested
+2016-01-31 20:47:39.792000: Session with ('127.0.0.1', 56187) closed
+
+2016-01-31 20:47:39.796000: Connection from: ('127.0.0.1', 56188)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:47:39.796000: Session with ('127.0.0.1', 56188) closed
+
+2016-01-31 20:47:39.797000: Connection from: ('127.0.0.1', 56189)
+Current work orders request
+2016-01-31 20:47:39.798000: Session with ('127.0.0.1', 56189) closed
+
+2016-01-31 20:47:42.367000: Connection from: ('127.0.0.1', 56190)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:47:42.368000: Session with ('127.0.0.1', 56190) closed
+
+2016-01-31 20:48:01.697000: Connection from: ('127.0.0.1', 56193)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:48:01.697000: Session with ('127.0.0.1', 56193) closed
+
+2016-01-31 20:48:01.767000: Connection from: ('127.0.0.1', 56194)
+UserNameList Requested
+2016-01-31 20:48:01.767000: Session with ('127.0.0.1', 56194) closed
+
+2016-01-31 20:48:01.771000: Connection from: ('127.0.0.1', 56195)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:48:01.771000: Session with ('127.0.0.1', 56195) closed
+
+2016-01-31 20:48:01.772000: Connection from: ('127.0.0.1', 56196)
+Current work orders request
+2016-01-31 20:48:01.772000: Session with ('127.0.0.1', 56196) closed
+
+2016-01-31 20:48:03.526000: Connection from: ('127.0.0.1', 56197)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:48:03.526000: Session with ('127.0.0.1', 56197) closed
+
+2016-01-31 20:51:06.594000: Connection from: ('127.0.0.1', 56203)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:51:06.594000: Session with ('127.0.0.1', 56203) closed
+
+2016-01-31 20:51:06.671000: Connection from: ('127.0.0.1', 56204)
+UserNameList Requested
+2016-01-31 20:51:06.671000: Session with ('127.0.0.1', 56204) closed
+
+2016-01-31 20:51:06.676000: Connection from: ('127.0.0.1', 56205)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:51:06.677000: Session with ('127.0.0.1', 56205) closed
+
+2016-01-31 20:51:06.677000: Connection from: ('127.0.0.1', 56206)
+Current work orders request
+2016-01-31 20:51:06.678000: Session with ('127.0.0.1', 56206) closed
+
+2016-01-31 20:51:08.892000: Connection from: ('127.0.0.1', 56207)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:51:08.892000: Session with ('127.0.0.1', 56207) closed
+
+2016-01-31 20:51:10.032000: Connection from: ('127.0.0.1', 56208)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:51:10.032000: Session with ('127.0.0.1', 56208) closed
+
+2016-01-31 20:51:10.418000: Connection from: ('127.0.0.1', 56209)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:51:10.418000: Session with ('127.0.0.1', 56209) closed
+
+2016-01-31 20:51:10.825000: Connection from: ('127.0.0.1', 56210)
+LoginRequest for Andy Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:51:10.825000: Session with ('127.0.0.1', 56210) closed
+
+2016-01-31 20:51:13.270000: Connection from: ('127.0.0.1', 56211)
+LoginRequest for Andy Woerpel
+Given Password: cats
+Login was successful
+2016-01-31 20:51:13.271000: Session with ('127.0.0.1', 56211) closed
+
+2016-01-31 20:51:19.275000: Connection from: ('127.0.0.1', 56212)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:51:19.275000: Session with ('127.0.0.1', 56212) closed
+
+2016-01-31 20:51:19.350000: Connection from: ('127.0.0.1', 56213)
+UserNameList Requested
+2016-01-31 20:51:19.350000: Session with ('127.0.0.1', 56213) closed
+
+2016-01-31 20:51:19.354000: Connection from: ('127.0.0.1', 56214)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:51:19.355000: Session with ('127.0.0.1', 56214) closed
+
+2016-01-31 20:51:19.356000: Connection from: ('127.0.0.1', 56215)
+Current work orders request
+2016-01-31 20:51:19.356000: Session with ('127.0.0.1', 56215) closed
+
+2016-01-31 20:51:22.602000: Connection from: ('127.0.0.1', 56216)
+LoginRequest for Steve Woerpel
+Given Password: 
+Password was incorrect
+2016-01-31 20:51:22.602000: Session with ('127.0.0.1', 56216) closed
+
+2016-01-31 20:51:24.112000: Connection from: ('127.0.0.1', 56217)
+LoginRequest for Steve Woerpel
+Given Password: cats
+Login was successful
+2016-01-31 20:51:24.112000: Session with ('127.0.0.1', 56217) closed
+
+2016-01-31 20:53:03.923000: Connection from: ('127.0.0.1', 56221)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:53:03.923000: Session with ('127.0.0.1', 56221) closed
+
+2016-01-31 20:53:03.994000: Connection from: ('127.0.0.1', 56222)
+UserNameList Requested
+2016-01-31 20:53:03.995000: Session with ('127.0.0.1', 56222) closed
+
+2016-01-31 20:53:03.998000: Connection from: ('127.0.0.1', 56223)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:53:03.998000: Session with ('127.0.0.1', 56223) closed
+
+2016-01-31 20:53:03.999000: Connection from: ('127.0.0.1', 56224)
+Current work orders request
+2016-01-31 20:53:03.999000: Session with ('127.0.0.1', 56224) closed
+
+2016-01-31 20:53:07.572000: Connection from: ('127.0.0.1', 56225)
+LoginRequest for Andy Woerpel
+Given Password: cats
+Login was successful
+2016-01-31 20:53:07.572000: Session with ('127.0.0.1', 56225) closed
+
+2016-01-31 20:54:11.157000: Connection from: ('127.0.0.1', 56253)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:54:11.157000: Session with ('127.0.0.1', 56253) closed
+
+2016-01-31 20:54:11.236000: Connection from: ('127.0.0.1', 56254)
+UserNameList Requested
+2016-01-31 20:54:11.236000: Session with ('127.0.0.1', 56254) closed
+
+2016-01-31 20:54:11.240000: Connection from: ('127.0.0.1', 56255)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:54:11.240000: Session with ('127.0.0.1', 56255) closed
+
+2016-01-31 20:54:11.241000: Connection from: ('127.0.0.1', 56256)
+Current work orders request
+2016-01-31 20:54:11.241000: Session with ('127.0.0.1', 56256) closed
+
+2016-01-31 20:54:13.361000: Connection from: ('127.0.0.1', 56257)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:54:13.361000: Session with ('127.0.0.1', 56257) closed
+
+2016-01-31 20:54:53.051000: Connection from: ('127.0.0.1', 56258)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:54:53.052000: Session with ('127.0.0.1', 56258) closed
+
+2016-01-31 20:54:53.124000: Connection from: ('127.0.0.1', 56259)
+UserNameList Requested
+2016-01-31 20:54:53.124000: Session with ('127.0.0.1', 56259) closed
+
+2016-01-31 20:54:53.128000: Connection from: ('127.0.0.1', 56260)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:54:53.128000: Session with ('127.0.0.1', 56260) closed
+
+2016-01-31 20:54:53.129000: Connection from: ('127.0.0.1', 56261)
+Current work orders request
+2016-01-31 20:54:53.129000: Session with ('127.0.0.1', 56261) closed
+
+2016-01-31 20:54:55.265000: Connection from: ('127.0.0.1', 56262)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:54:55.265000: Session with ('127.0.0.1', 56262) closed
+
+2016-01-31 20:55:22.479000: Connection from: ('127.0.0.1', 56267)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:55:22.479000: Session with ('127.0.0.1', 56267) closed
+
+2016-01-31 20:55:22.549000: Connection from: ('127.0.0.1', 56268)
+UserNameList Requested
+2016-01-31 20:55:22.549000: Session with ('127.0.0.1', 56268) closed
+
+2016-01-31 20:55:22.553000: Connection from: ('127.0.0.1', 56269)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:55:22.553000: Session with ('127.0.0.1', 56269) closed
+
+2016-01-31 20:55:22.554000: Connection from: ('127.0.0.1', 56270)
+Current work orders request
+2016-01-31 20:55:22.554000: Session with ('127.0.0.1', 56270) closed
+
+2016-01-31 20:55:24.360000: Connection from: ('127.0.0.1', 56271)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:55:24.361000: Session with ('127.0.0.1', 56271) closed
+
+2016-01-31 20:55:43.335000: Connection from: ('127.0.0.1', 56272)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:55:43.335000: Session with ('127.0.0.1', 56272) closed
+
+2016-01-31 20:55:43.409000: Connection from: ('127.0.0.1', 56273)
+UserNameList Requested
+2016-01-31 20:55:43.409000: Session with ('127.0.0.1', 56273) closed
+
+2016-01-31 20:55:43.412000: Connection from: ('127.0.0.1', 56274)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:55:43.412000: Session with ('127.0.0.1', 56274) closed
+
+2016-01-31 20:55:43.413000: Connection from: ('127.0.0.1', 56275)
+Current work orders request
+2016-01-31 20:55:43.413000: Session with ('127.0.0.1', 56275) closed
+
+2016-01-31 20:55:45.219000: Connection from: ('127.0.0.1', 56276)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-01-31 20:55:45.219000: Session with ('127.0.0.1', 56276) closed
+
+2016-01-31 20:56:34.579000: Connection from: ('127.0.0.1', 56277)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:56:34.579000: Session with ('127.0.0.1', 56277) closed
+
+2016-01-31 20:56:34.650000: Connection from: ('127.0.0.1', 56278)
+UserNameList Requested
+2016-01-31 20:56:34.650000: Session with ('127.0.0.1', 56278) closed
+
+2016-01-31 20:56:34.654000: Connection from: ('127.0.0.1', 56279)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:56:34.654000: Session with ('127.0.0.1', 56279) closed
+
+2016-01-31 20:56:34.655000: Connection from: ('127.0.0.1', 56280)
+Current work orders request
+2016-01-31 20:56:34.655000: Session with ('127.0.0.1', 56280) closed
+
+2016-01-31 20:56:38.473000: Connection from: ('127.0.0.1', 56281)
+LoginRequest for Andy Woerpel
+Given Password: cats
+Login was successful
+2016-01-31 20:56:38.473000: Session with ('127.0.0.1', 56281) closed
+
+2016-01-31 20:57:06.163000: Connection from: ('127.0.0.1', 56283)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:57:06.163000: Session with ('127.0.0.1', 56283) closed
+
+2016-01-31 20:57:06.235000: Connection from: ('127.0.0.1', 56284)
+UserNameList Requested
+2016-01-31 20:57:06.235000: Session with ('127.0.0.1', 56284) closed
+
+2016-01-31 20:57:06.239000: Connection from: ('127.0.0.1', 56285)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:57:06.239000: Session with ('127.0.0.1', 56285) closed
+
+2016-01-31 20:57:06.239000: Connection from: ('127.0.0.1', 56286)
+Current work orders request
+2016-01-31 20:57:06.240000: Session with ('127.0.0.1', 56286) closed
+
+2016-01-31 20:57:08.058000: Connection from: ('127.0.0.1', 56287)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:57:08.058000: Session with ('127.0.0.1', 56287) closed
+
+2016-01-31 20:57:46.119000: Connection from: ('127.0.0.1', 56294)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:57:46.119000: Session with ('127.0.0.1', 56294) closed
+
+2016-01-31 20:57:46.187000: Connection from: ('127.0.0.1', 56295)
+UserNameList Requested
+2016-01-31 20:57:46.187000: Session with ('127.0.0.1', 56295) closed
+
+2016-01-31 20:57:46.191000: Connection from: ('127.0.0.1', 56296)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:57:46.191000: Session with ('127.0.0.1', 56296) closed
+
+2016-01-31 20:57:46.192000: Connection from: ('127.0.0.1', 56297)
+Current work orders request
+2016-01-31 20:57:46.192000: Session with ('127.0.0.1', 56297) closed
+
+2016-01-31 20:57:48.119000: Connection from: ('127.0.0.1', 56298)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:57:48.119000: Session with ('127.0.0.1', 56298) closed
+
+2016-01-31 20:58:12.986000: Connection from: ('127.0.0.1', 56300)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:58:12.986000: Session with ('127.0.0.1', 56300) closed
+
+2016-01-31 20:58:13.064000: Connection from: ('127.0.0.1', 56301)
+UserNameList Requested
+2016-01-31 20:58:13.064000: Session with ('127.0.0.1', 56301) closed
+
+2016-01-31 20:58:13.069000: Connection from: ('127.0.0.1', 56302)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:58:13.069000: Session with ('127.0.0.1', 56302) closed
+
+2016-01-31 20:58:13.070000: Connection from: ('127.0.0.1', 56303)
+Current work orders request
+2016-01-31 20:58:13.070000: Session with ('127.0.0.1', 56303) closed
+
+2016-01-31 20:58:14.756000: Connection from: ('127.0.0.1', 56304)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:58:14.756000: Session with ('127.0.0.1', 56304) closed
+
+2016-01-31 20:58:54.333000: Connection from: ('127.0.0.1', 56306)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:58:54.333000: Session with ('127.0.0.1', 56306) closed
+
+2016-01-31 20:58:54.408000: Connection from: ('127.0.0.1', 56307)
+UserNameList Requested
+2016-01-31 20:58:54.408000: Session with ('127.0.0.1', 56307) closed
+
+2016-01-31 20:58:54.413000: Connection from: ('127.0.0.1', 56308)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:58:54.413000: Session with ('127.0.0.1', 56308) closed
+
+2016-01-31 20:58:54.414000: Connection from: ('127.0.0.1', 56309)
+Current work orders request
+2016-01-31 20:58:54.414000: Session with ('127.0.0.1', 56309) closed
+
+2016-01-31 20:59:32.731000: Connection from: ('127.0.0.1', 56310)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:59:32.732000: Session with ('127.0.0.1', 56310) closed
+
+2016-01-31 20:59:32.801000: Connection from: ('127.0.0.1', 56311)
+UserNameList Requested
+2016-01-31 20:59:32.801000: Session with ('127.0.0.1', 56311) closed
+
+2016-01-31 20:59:32.805000: Connection from: ('127.0.0.1', 56312)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:59:32.806000: Session with ('127.0.0.1', 56312) closed
+
+2016-01-31 20:59:32.806000: Connection from: ('127.0.0.1', 56313)
+Current work orders request
+2016-01-31 20:59:32.807000: Session with ('127.0.0.1', 56313) closed
+
+2016-01-31 20:59:34.819000: Connection from: ('127.0.0.1', 56314)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:59:34.819000: Session with ('127.0.0.1', 56314) closed
+
+2016-01-31 20:59:53.335000: Connection from: ('127.0.0.1', 56315)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 20:59:53.335000: Session with ('127.0.0.1', 56315) closed
+
+2016-01-31 20:59:53.409000: Connection from: ('127.0.0.1', 56316)
+UserNameList Requested
+2016-01-31 20:59:53.410000: Session with ('127.0.0.1', 56316) closed
+
+2016-01-31 20:59:53.413000: Connection from: ('127.0.0.1', 56317)
+Current work orders message size request: 2914 Bytes
+2016-01-31 20:59:53.413000: Session with ('127.0.0.1', 56317) closed
+
+2016-01-31 20:59:53.414000: Connection from: ('127.0.0.1', 56318)
+Current work orders request
+2016-01-31 20:59:53.414000: Session with ('127.0.0.1', 56318) closed
+
+2016-01-31 20:59:55.609000: Connection from: ('127.0.0.1', 56319)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 20:59:55.609000: Session with ('127.0.0.1', 56319) closed
+2016-01-31 21:00:05.341000: Server Stated
+
+2016-01-31 21:00:08.683000: Connection from: ('127.0.0.1', 56322)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 21:00:08.683000: Session with ('127.0.0.1', 56322) closed
+
+2016-01-31 21:00:08.753000: Connection from: ('127.0.0.1', 56323)
+UserNameList Requested
+2016-01-31 21:00:08.753000: Session with ('127.0.0.1', 56323) closed
+
+2016-01-31 21:00:08.756000: Connection from: ('127.0.0.1', 56324)
+Current work orders message size request: 39 Bytes
+2016-01-31 21:00:08.756000: Session with ('127.0.0.1', 56324) closed
+
+2016-01-31 21:00:08.757000: Connection from: ('127.0.0.1', 56325)
+Current work orders request
+2016-01-31 21:00:08.757000: Session with ('127.0.0.1', 56325) closed
+
+2016-01-31 21:00:10.915000: Connection from: ('127.0.0.1', 56326)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-01-31 21:00:10.915000: Session with ('127.0.0.1', 56326) closed
+
+2016-01-31 21:00:57.670000: Connection from: ('127.0.0.1', 56327)
+
+2016-01-31 21:02:45.614000: Connection from: ('127.0.0.1', 56341)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 21:02:45.614000: Session with ('127.0.0.1', 56341) closed
+
+2016-01-31 21:02:45.685000: Connection from: ('127.0.0.1', 56342)
+UserNameList Requested
+2016-01-31 21:02:45.685000: Session with ('127.0.0.1', 56342) closed
+
+2016-01-31 21:02:45.690000: Connection from: ('127.0.0.1', 56343)
+Current work orders message size request: 39 Bytes
+2016-01-31 21:02:45.690000: Session with ('127.0.0.1', 56343) closed
+
+2016-01-31 21:02:45.691000: Connection from: ('127.0.0.1', 56344)
+Current work orders request
+2016-01-31 21:02:45.691000: Session with ('127.0.0.1', 56344) closed
+
+2016-01-31 21:02:59.928000: Connection from: ('127.0.0.1', 56353)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 21:02:59.928000: Session with ('127.0.0.1', 56353) closed
+
+2016-01-31 21:03:00.002000: Connection from: ('127.0.0.1', 56354)
+UserNameList Requested
+2016-01-31 21:03:00.002000: Session with ('127.0.0.1', 56354) closed
+
+2016-01-31 21:03:00.009000: Connection from: ('127.0.0.1', 56355)
+Current work orders message size request: 39 Bytes
+2016-01-31 21:03:00.009000: Session with ('127.0.0.1', 56355) closed
+
+2016-01-31 21:03:00.009000: Connection from: ('127.0.0.1', 56356)
+Current work orders request
+2016-01-31 21:03:00.009000: Session with ('127.0.0.1', 56356) closed
+
+2016-01-31 21:03:02.444000: Connection from: ('127.0.0.1', 56357)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 21:03:02.444000: Session with ('127.0.0.1', 56357) closed
+
+2016-01-31 21:03:08.171000: Connection from: ('127.0.0.1', 56358)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 33
+2016-01-31 21:03:08.179000: Session with ('127.0.0.1', 56358) closed
+
+2016-01-31 21:03:28.578000: Connection from: ('127.0.0.1', 56361)
+
+2016-01-31 21:03:48.572000: Connection from: ('127.0.0.1', 56362)
+2016-01-31 21:05:49.060000: Server Stated
+
+2016-01-31 21:06:04.066000: Connection from: ('127.0.0.1', 56372)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 21:06:04.066000: Session with ('127.0.0.1', 56372) closed
+
+2016-01-31 21:06:04.134000: Connection from: ('127.0.0.1', 56373)
+UserNameList Requested
+2016-01-31 21:06:04.134000: Session with ('127.0.0.1', 56373) closed
+
+2016-01-31 21:06:04.138000: Connection from: ('127.0.0.1', 56374)
+Current work orders message size request: 739 Bytes
+2016-01-31 21:06:04.138000: Session with ('127.0.0.1', 56374) closed
+
+2016-01-31 21:06:04.139000: Connection from: ('127.0.0.1', 56375)
+Current work orders request
+2016-01-31 21:06:04.139000: Session with ('127.0.0.1', 56375) closed
+
+2016-01-31 21:06:06.905000: Connection from: ('127.0.0.1', 56376)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 21:06:06.906000: Session with ('127.0.0.1', 56376) closed
+
+2016-01-31 21:06:17.692000: Connection from: ('127.0.0.1', 56377)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 34
+2016-01-31 21:06:46.819000: Session with ('127.0.0.1', 56377) closed
+
+2016-01-31 21:07:01.033000: Connection from: ('127.0.0.1', 56381)
+
+2016-01-31 21:07:07.143000: Connection from: ('127.0.0.1', 56382)
+
+2016-01-31 21:07:28.776000: Connection from: ('127.0.0.1', 56383)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 21:07:28.776000: Session with ('127.0.0.1', 56383) closed
+
+2016-01-31 21:07:28.861000: Connection from: ('127.0.0.1', 56384)
+UserNameList Requested
+2016-01-31 21:07:28.861000: Session with ('127.0.0.1', 56384) closed
+
+2016-01-31 21:07:28.864000: Connection from: ('127.0.0.1', 56385)
+Current work orders message size request: 1131 Bytes
+2016-01-31 21:07:28.864000: Session with ('127.0.0.1', 56385) closed
+
+2016-01-31 21:07:28.865000: Connection from: ('127.0.0.1', 56386)
+Current work orders request
+2016-01-31 21:07:28.865000: Session with ('127.0.0.1', 56386) closed
+
+2016-01-31 21:07:30.773000: Connection from: ('127.0.0.1', 56387)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 21:07:30.773000: Session with ('127.0.0.1', 56387) closed
+
+2016-01-31 21:07:34.833000: Connection from: ('127.0.0.1', 56388)
+2016-01-31 21:08:08.656000: Server Stated
+
+2016-01-31 21:08:16.451000: Connection from: ('127.0.0.1', 56390)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 21:08:16.451000: Session with ('127.0.0.1', 56390) closed
+
+2016-01-31 21:08:16.521000: Connection from: ('127.0.0.1', 56391)
+UserNameList Requested
+2016-01-31 21:08:16.522000: Session with ('127.0.0.1', 56391) closed
+
+2016-01-31 21:08:16.525000: Connection from: ('127.0.0.1', 56392)
+Current work orders message size request: 1131 Bytes
+2016-01-31 21:08:16.525000: Session with ('127.0.0.1', 56392) closed
+
+2016-01-31 21:08:16.526000: Connection from: ('127.0.0.1', 56393)
+Current work orders request
+2016-01-31 21:08:16.526000: Session with ('127.0.0.1', 56393) closed
+
+2016-01-31 21:08:18.670000: Connection from: ('127.0.0.1', 56394)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-01-31 21:08:18.670000: Session with ('127.0.0.1', 56394) closed
+
+2016-01-31 21:08:28.214000: Connection from: ('127.0.0.1', 56395)
+
+2016-01-31 21:16:30.071000: Connection from: ('127.0.0.1', 56415)
+
+2016-01-31 21:16:45.950000: Connection from: ('127.0.0.1', 56416)
+Maximum Message Size Request: 1024 Bytes
+2016-01-31 21:16:45.950000: Session with ('127.0.0.1', 56416) closed
+
+2016-01-31 21:16:46.024000: Connection from: ('127.0.0.1', 56417)
+UserNameList Requested
+2016-01-31 21:16:46.024000: Session with ('127.0.0.1', 56417) closed
+
+2016-01-31 21:16:46.028000: Connection from: ('127.0.0.1', 56418)
+Current work orders message size request: 1131 Bytes
+2016-01-31 21:16:46.029000: Session with ('127.0.0.1', 56418) closed
+
+2016-01-31 21:16:46.029000: Connection from: ('127.0.0.1', 56419)
+Current work orders request
+2016-01-31 21:16:46.029000: Session with ('127.0.0.1', 56419) closed
+
+2016-01-31 21:16:52.391000: Connection from: ('127.0.0.1', 56421)
+LoginRequest for Scott Woerpel
+Given Password: cats
+Login was successful
+2016-01-31 21:16:52.391000: Session with ('127.0.0.1', 56421) closed

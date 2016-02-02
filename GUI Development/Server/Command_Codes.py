@@ -3,4 +3,6 @@ codes = {"True" : "00",
          "UsernameListRequest" : "02",
          "LoginRequest" : "03",
          "WorkOrderCreationRequest" : "04",
-         "BufferSizeRequest" : "06"}
+         "BufferSizeRequest" : "06",
+         "CurrentWorkOrdersRequest" : "07",
+         "CurrentWorkOrdersMessageSizeRequest" : "08"}

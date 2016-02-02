@@ -1,8 +1,9 @@
+from datetime import date, timedelta
 from Tkinter import *
+
+import ServerComms
 import Users
 import Work_Order
-from datetime import date, timedelta
-import ServerComms
 
 
 class E_Screens:
@@ -25,8 +26,8 @@ class Application(Tk):
         Tk.__init__(self, *args, **kwargs)
         self.title("Seljan Scheduler")
 
-        self.currentWorkOrders = []
-        
+
+
         self.iconbitmap(r"C:\Users\Andy\Desktop\Programs\Python\Seljan-Scheduler\GUI Development\Client\Clarisse.ico")
 
         # Initializing Top Menu Buttons and the frame that they go in.
@@ -61,6 +62,8 @@ class Application(Tk):
         contentFrame.grid_rowconfigure(0, weight=1)
         contentFrame.grid_columnconfigure(0, weight=1)
 
+
+
         # This block initializes each of the content subframes and places
         # them in the same location in the contentFrame.
         self.frames = []
@@ -71,6 +74,8 @@ class Application(Tk):
 
         # Setting the initial screen to be the LoginScreen
         self.ShowFrame(E_Screens.LoginScreen)
+
+        self.messageLabel = Label(self, text = "test").pack(expand = True, fill = X)
 
         # These method calls make it so that the root window
         # can not shrink smaller than the default window size.
@@ -124,9 +129,11 @@ class Application(Tk):
                 for button in self.topButtons:
                     button.config(state=NORMAL)
                 self.EnterScreen(1)
-            else:
-                errorLabelText.set("Incorrect Password Entered")
-                password.set("")
+                if Users.currentUser.SetPriority:
+                    self.frames[1].increasePriorityButton.config(state = NORMAL)
+                    self.frames[1].decreasePriorityButton.config(state = NORMAL)
+            errorLabelText.set("Incorrect Password Entered")
+            password.set("")
 
 
 
@@ -134,17 +141,85 @@ class CurrentJobsScreen(Frame):
     def __init__(self, parent, controller):
         Frame.__init__(self, parent)
 
-        # Blank Buffer Frame
-        Frame(self, height=10).pack()
+        controller.currentWorkOrders = serverComms.RequestCurrentJobs()
 
-        Button(self, text="Job1", bd=1).pack()
 
-        Label(self, text="Job1", bd=1).pack()
-        Label(self, text="Job1", bd=1).pack()
-        Label(self, text="Job1", bd=1).pack()
-        Label(self, text="Job1", bd=1).pack()
-        Label(self, text="Job1", bd=1).pack()
-        Label(self, text="Job1", bd=1).pack()
+
+        contentFrame  = Frame(self)
+        controlFrame  = Frame(self)
+        priorityFrame = Frame(controlFrame, bd = 3)
+        scrollFrame   = Frame(controlFrame, bd = 3)
+
+
+
+        numberOfJobsToDisplay = 6
+
+        # Create empty frames that will contain the work order information
+        workOrderFrames = []
+        for frameNumber in range(numberOfJobsToDisplay):
+            workOrderFrames.append(Frame(contentFrame, bg = "black",bd = 2))
+
+        # Fill the blank frames with work order info
+        count = 0
+
+
+        for workOrder in controller.currentWorkOrders:
+            if count < numberOfJobsToDisplay:
+                currentFrame = workOrderFrames[count]
+                topRowFrame = Frame(currentFrame)
+                bottomRowFrame = Frame(currentFrame)
+                subTaskFrame = Frame(bottomRowFrame)
+                Label(topRowFrame, text = "Title: %s" % workOrder.jobTitle, anchor = W).pack(side = LEFT, fill = X, expand = True )
+                Label(topRowFrame, text = "Creator: %s" % workOrder.requestor.name, anchor = E).pack(side = RIGHT, fill = X, expand = True )
+                Label(bottomRowFrame, text = "Job Number: %s" % str(workOrder.jobNumber), anchor = W).pack(side = LEFT, fill = X, expand = True )
+                Label(bottomRowFrame, text = "Customer: %s" % workOrder.customer, anchor = W).pack(side = LEFT, fill = X, expand = True )
+                Label(bottomRowFrame, text = "Due Date: %s" % workOrder.dueDate, anchor = W).pack(side = LEFT, fill = X, expand = True )
+
+                for step in workOrder.steps:
+                    stepLabel = Label(subTaskFrame, bd = 2)
+                    if step.stepType == Work_Order.jobOptions[0]:
+                        stepLabel.config(text = "C", bg = 'black', fg = 'white', )
+                    elif step.stepType == Work_Order.jobOptions[1]:
+                        stepLabel.config(text = "B", bg = "red")
+                    elif step.stepType == Work_Order.jobOptions[2]:
+                        stepLabel.config(text = "W", bg = "green")
+                    else:
+                        stepLabel.config(text = "P", bg = "blue")
+
+                    stepLabel.pack(side = LEFT)
+
+                subTaskFrame.pack()
+
+                topRowFrame.pack(fill = X, expand = True)
+                bottomRowFrame.pack(fill = X, expand = True)
+            count += 1
+
+        for frame in workOrderFrames:
+            frame.pack(padx = 2, pady = 2, fill = X, expand = True)
+
+        ##############  Content Frame  #########################
+
+
+
+
+
+        ##############  Control Frame  #########################
+        self.increasePriorityButton = Button(priorityFrame, text=u"\u25B2", bd=1, state = DISABLED)
+        self.increasePriorityButton.pack()
+        Label(priorityFrame, text = "Priority").pack()
+        self.decreasePriorityButton = Button(priorityFrame, text = u"\u25BC", bd=1, state = DISABLED)
+        self.decreasePriorityButton.pack()
+
+        Button(scrollFrame, text=u"\u25B2", bd=1).pack()
+        Label(scrollFrame, text = "Scroll").pack()
+        Button(scrollFrame, text = u"\u25BC", bd=1).pack()
+
+
+        priorityFrame.pack(side = LEFT)
+        scrollFrame.pack(side = LEFT)
+        controlFrame.pack(side = RIGHT)
+        contentFrame.pack(side = LEFT, expand = True, fill = X)
+
 
 
 class MyOrdersScreen(Frame):
