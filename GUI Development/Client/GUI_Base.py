@@ -143,7 +143,7 @@ class CurrentJobsScreen(Frame):
 
         controller.currentWorkOrders = serverComms.RequestCurrentJobs()
 
-
+        self.currentStackNumber = 0
 
         contentFrame  = Frame(self)
         controlFrame  = Frame(self)
@@ -156,16 +156,29 @@ class CurrentJobsScreen(Frame):
 
         # Create empty frames that will contain the work order information
         workOrderFrames = []
-        for frameNumber in range(numberOfJobsToDisplay):
-            workOrderFrames.append(Frame(contentFrame, bg = "black",bd = 2))
+
+        # The first for loop will determine how many frames deep the stack should be.
+        # The line with "%" will return True (1) if there is a remainder.
+        for frameStack in range((len(controller.currentWorkOrders) / numberOfJobsToDisplay) +
+                                        ((len(controller.currentWorkOrders) % numberOfJobsToDisplay) != 0)):
+            workOrderFrames.append([])
+
+        stackNumber = 0
+        count = 0
+        for frameNumber in range(len(controller.currentWorkOrders)):
+            workOrderFrames[stackNumber].append(Frame(contentFrame, bg = "black",bd = 2))
+            count += 1
+
+            if count == numberOfJobsToDisplay:
+                stackNumber += 1
+                count = 0
 
         # Fill the blank frames with work order info
         count = 0
-
-
+        stackNumber = 0
         for workOrder in controller.currentWorkOrders:
             if count < numberOfJobsToDisplay:
-                currentFrame = workOrderFrames[count]
+                currentFrame = workOrderFrames[stackNumber][count]
                 topRowFrame = Frame(currentFrame)
                 bottomRowFrame = Frame(currentFrame)
                 subTaskFrame = Frame(bottomRowFrame)
@@ -194,8 +207,19 @@ class CurrentJobsScreen(Frame):
                 bottomRowFrame.pack(fill = X, expand = True)
             count += 1
 
-        for frame in workOrderFrames:
-            frame.pack(padx = 2, pady = 2, fill = X, expand = True)
+            if count == numberOfJobsToDisplay:
+                count = 0
+                stackNumber += 1
+
+        count = 0
+        stackNumber = 0
+        for frameStack in workOrderFrames:
+            for frame in frameStack:
+                frame.grid(row=count, column=0, sticky = "ew")
+                count += 1
+
+            stackNumber += 1
+            count = 0
 
         ##############  Content Frame  #########################
 
@@ -219,6 +243,11 @@ class CurrentJobsScreen(Frame):
         scrollFrame.pack(side = LEFT)
         controlFrame.pack(side = RIGHT)
         contentFrame.pack(side = LEFT, expand = True, fill = X)
+
+
+
+        def RaiseSubFrame(self, frameStackToRaise):
+
 
 
 

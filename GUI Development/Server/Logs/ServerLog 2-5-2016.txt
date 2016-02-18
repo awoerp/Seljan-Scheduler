@@ -1,0 +1,640 @@
+2016-02-05 21:03:45.037000: Server Stated
+
+2016-02-05 21:03:47.629000: Connection from: ('127.0.0.1', 51598)
+UserNameList Requested
+2016-02-05 21:03:47.629000: Session with ('127.0.0.1', 51598) closed
+
+2016-02-05 21:03:47.634000: Connection from: ('127.0.0.1', 51599)
+Current work orders request
+2016-02-05 21:03:47.635000: Session with ('127.0.0.1', 51599) closed
+
+2016-02-05 21:03:56.219000: Connection from: ('127.0.0.1', 51600)
+UserNameList Requested
+2016-02-05 21:03:56.220000: Session with ('127.0.0.1', 51600) closed
+
+2016-02-05 21:03:56.224000: Connection from: ('127.0.0.1', 51601)
+Current work orders request
+2016-02-05 21:03:56.226000: Session with ('127.0.0.1', 51601) closed
+
+2016-02-05 21:03:59.046000: Connection from: ('127.0.0.1', 51602)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-02-05 21:03:59.046000: Session with ('127.0.0.1', 51602) closed
+
+2016-02-05 21:04:02.498000: Connection from: ('127.0.0.1', 51603)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 45
+2016-02-05 21:04:02.518000: Session with ('127.0.0.1', 51603) closed
+
+2016-02-05 21:04:04.177000: Connection from: ('127.0.0.1', 51604)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 46
+2016-02-05 21:04:04.475000: Session with ('127.0.0.1', 51604) closed
+
+2016-02-05 21:04:05.229000: Connection from: ('127.0.0.1', 51605)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 47
+2016-02-05 21:04:05.250000: Session with ('127.0.0.1', 51605) closed
+
+2016-02-05 21:04:05.965000: Connection from: ('127.0.0.1', 51606)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 48
+2016-02-05 21:04:05.990000: Session with ('127.0.0.1', 51606) closed
+
+2016-02-05 21:04:07.381000: Connection from: ('127.0.0.1', 51607)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 49
+2016-02-05 21:04:07.420000: Session with ('127.0.0.1', 51607) closed
+
+2016-02-05 21:04:08.310000: Connection from: ('127.0.0.1', 51608)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 50
+2016-02-05 21:04:08.327000: Session with ('127.0.0.1', 51608) closed
+
+2016-02-05 21:04:09.056000: Connection from: ('127.0.0.1', 51609)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 51
+2016-02-05 21:04:09.075000: Session with ('127.0.0.1', 51609) closed
+
+2016-02-05 21:04:12.334000: Connection from: ('127.0.0.1', 51611)
+UserNameList Requested
+2016-02-05 21:04:12.334000: Session with ('127.0.0.1', 51611) closed
+
+2016-02-05 21:04:12.337000: Connection from: ('127.0.0.1', 51612)
+Current work orders request
+2016-02-05 21:04:12.338000: Session with ('127.0.0.1', 51612) closed
+
+2016-02-05 21:04:14.975000: Connection from: ('127.0.0.1', 51616)
+UserNameList Requested
+2016-02-05 21:04:14.975000: Session with ('127.0.0.1', 51616) closed
+
+2016-02-05 21:04:14.978000: Connection from: ('127.0.0.1', 51617)
+Current work orders request
+2016-02-05 21:04:14.979000: Session with ('127.0.0.1', 51617) closed
+
+2016-02-05 21:04:16.422000: Connection from: ('127.0.0.1', 51618)
+UserNameList Requested
+2016-02-05 21:04:16.422000: Session with ('127.0.0.1', 51618) closed
+
+2016-02-05 21:04:16.426000: Connection from: ('127.0.0.1', 51619)
+Current work orders request
+2016-02-05 21:04:16.426000: Session with ('127.0.0.1', 51619) closed
+
+2016-02-05 21:04:17.663000: Connection from: ('127.0.0.1', 51620)
+UserNameList Requested
+2016-02-05 21:04:17.663000: Session with ('127.0.0.1', 51620) closed
+
+2016-02-05 21:04:17.666000: Connection from: ('127.0.0.1', 51621)
+Current work orders request
+2016-02-05 21:04:17.667000: Session with ('127.0.0.1', 51621) closed
+
+2016-02-05 21:04:20.337000: Connection from: ('127.0.0.1', 51622)
+UserNameList Requested
+2016-02-05 21:04:20.337000: Session with ('127.0.0.1', 51622) closed
+
+2016-02-05 21:04:20.340000: Connection from: ('127.0.0.1', 51623)
+Current work orders request
+2016-02-05 21:04:20.341000: Session with ('127.0.0.1', 51623) closed
+
+2016-02-05 21:04:22.383000: Connection from: ('127.0.0.1', 51624)
+UserNameList Requested
+2016-02-05 21:04:22.383000: Session with ('127.0.0.1', 51624) closed
+
+2016-02-05 21:04:22.386000: Connection from: ('127.0.0.1', 51625)
+Current work orders request
+2016-02-05 21:04:22.387000: Session with ('127.0.0.1', 51625) closed
+
+2016-02-05 21:04:31.381000: Connection from: ('127.0.0.1', 51631)
+UserNameList Requested
+2016-02-05 21:04:31.382000: Session with ('127.0.0.1', 51631) closed
+
+2016-02-05 21:04:31.385000: Connection from: ('127.0.0.1', 51632)
+Current work orders request
+2016-02-05 21:04:31.386000: Session with ('127.0.0.1', 51632) closed
+
+2016-02-05 21:04:32.530000: Connection from: ('127.0.0.1', 51633)
+UserNameList Requested
+2016-02-05 21:04:32.530000: Session with ('127.0.0.1', 51633) closed
+
+2016-02-05 21:04:32.534000: Connection from: ('127.0.0.1', 51634)
+Current work orders request
+2016-02-05 21:04:32.535000: Session with ('127.0.0.1', 51634) closed
+
+2016-02-05 21:04:33.456000: Connection from: ('127.0.0.1', 51635)
+UserNameList Requested
+2016-02-05 21:04:33.456000: Session with ('127.0.0.1', 51635) closed
+
+2016-02-05 21:04:33.459000: Connection from: ('127.0.0.1', 51636)
+Current work orders request
+2016-02-05 21:04:33.460000: Session with ('127.0.0.1', 51636) closed
+
+2016-02-05 21:04:34.406000: Connection from: ('127.0.0.1', 51637)
+UserNameList Requested
+2016-02-05 21:04:34.406000: Session with ('127.0.0.1', 51637) closed
+
+2016-02-05 21:04:34.410000: Connection from: ('127.0.0.1', 51638)
+Current work orders request
+2016-02-05 21:04:34.410000: Session with ('127.0.0.1', 51638) closed
+
+2016-02-05 21:04:35.446000: Connection from: ('127.0.0.1', 51639)
+UserNameList Requested
+2016-02-05 21:04:35.447000: Session with ('127.0.0.1', 51639) closed
+
+2016-02-05 21:04:35.450000: Connection from: ('127.0.0.1', 51640)
+Current work orders request
+2016-02-05 21:04:35.450000: Session with ('127.0.0.1', 51640) closed
+
+2016-02-05 21:04:58.798000: Connection from: ('127.0.0.1', 51641)
+UserNameList Requested
+2016-02-05 21:04:58.798000: Session with ('127.0.0.1', 51641) closed
+
+2016-02-05 21:04:58.802000: Connection from: ('127.0.0.1', 51642)
+Current work orders request
+2016-02-05 21:04:58.803000: Session with ('127.0.0.1', 51642) closed
+
+2016-02-05 21:05:21.352000: Connection from: ('127.0.0.1', 51643)
+UserNameList Requested
+2016-02-05 21:05:21.352000: Session with ('127.0.0.1', 51643) closed
+
+2016-02-05 21:05:21.355000: Connection from: ('127.0.0.1', 51644)
+Current work orders request
+2016-02-05 21:05:21.356000: Session with ('127.0.0.1', 51644) closed
+
+2016-02-05 21:05:34.819000: Connection from: ('127.0.0.1', 51645)
+UserNameList Requested
+2016-02-05 21:05:34.819000: Session with ('127.0.0.1', 51645) closed
+
+2016-02-05 21:05:34.823000: Connection from: ('127.0.0.1', 51646)
+Current work orders request
+2016-02-05 21:05:34.824000: Session with ('127.0.0.1', 51646) closed
+2016-02-05 21:06:38.054000: Server Stated
+
+2016-02-05 21:06:40.770000: Connection from: ('127.0.0.1', 51647)
+UserNameList Requested
+2016-02-05 21:06:40.770000: Session with ('127.0.0.1', 51647) closed
+
+2016-02-05 21:06:40.773000: Connection from: ('127.0.0.1', 51648)
+Current work orders request
+2016-02-05 21:06:40.773000: Session with ('127.0.0.1', 51648) closed
+
+2016-02-05 21:06:46.011000: Connection from: ('127.0.0.1', 51649)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-02-05 21:06:46.011000: Session with ('127.0.0.1', 51649) closed
+
+2016-02-05 21:06:50.359000: Connection from: ('127.0.0.1', 51650)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 52
+2016-02-05 21:06:50.373000: Session with ('127.0.0.1', 51650) closed
+
+2016-02-05 21:06:53.152000: Connection from: ('127.0.0.1', 51651)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 53
+2016-02-05 21:06:53.165000: Session with ('127.0.0.1', 51651) closed
+
+2016-02-05 21:06:54.684000: Connection from: ('127.0.0.1', 51652)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 54
+2016-02-05 21:06:54.701000: Session with ('127.0.0.1', 51652) closed
+
+2016-02-05 21:06:58.939000: Connection from: ('127.0.0.1', 51653)
+UserNameList Requested
+2016-02-05 21:06:58.940000: Session with ('127.0.0.1', 51653) closed
+
+2016-02-05 21:06:58.943000: Connection from: ('127.0.0.1', 51654)
+Current work orders request
+2016-02-05 21:06:58.943000: Session with ('127.0.0.1', 51654) closed
+
+2016-02-05 21:07:04.643000: Connection from: ('127.0.0.1', 51655)
+LoginRequest for Andy Woerpel
+Given Password: cats
+Login was successful
+2016-02-05 21:07:04.643000: Session with ('127.0.0.1', 51655) closed
+
+2016-02-05 21:07:18.119000: Connection from: ('127.0.0.1', 51656)
+Connection as: Andy Woerpel
+Work Order Creation Attempt
+Successfully created work order: 55
+2016-02-05 21:07:18.133000: Session with ('127.0.0.1', 51656) closed
+
+2016-02-05 21:07:19.823000: Connection from: ('127.0.0.1', 51657)
+Connection as: Andy Woerpel
+Work Order Creation Attempt
+Successfully created work order: 56
+2016-02-05 21:07:19.840000: Session with ('127.0.0.1', 51657) closed
+
+2016-02-05 21:07:28.264000: Connection from: ('127.0.0.1', 51658)
+UserNameList Requested
+2016-02-05 21:07:28.265000: Session with ('127.0.0.1', 51658) closed
+
+2016-02-05 21:07:28.268000: Connection from: ('127.0.0.1', 51659)
+Current work orders request
+2016-02-05 21:07:28.268000: Session with ('127.0.0.1', 51659) closed
+
+2016-02-05 21:07:34.381000: Connection from: ('127.0.0.1', 51660)
+UserNameList Requested
+2016-02-05 21:07:34.382000: Session with ('127.0.0.1', 51660) closed
+
+2016-02-05 21:07:34.385000: Connection from: ('127.0.0.1', 51661)
+Current work orders request
+2016-02-05 21:07:34.385000: Session with ('127.0.0.1', 51661) closed
+
+2016-02-05 21:08:30.198000: Connection from: ('127.0.0.1', 51672)
+UserNameList Requested
+2016-02-05 21:08:30.198000: Session with ('127.0.0.1', 51672) closed
+
+2016-02-05 21:09:09.934000: Connection from: ('127.0.0.1', 51673)
+Current work orders request
+2016-02-05 21:09:09.935000: Session with ('127.0.0.1', 51673) closed
+
+2016-02-05 21:09:43.209000: Connection from: ('127.0.0.1', 51680)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-02-05 21:09:43.209000: Session with ('127.0.0.1', 51680) closed
+
+2016-02-05 21:10:05.147000: Connection from: ('127.0.0.1', 51681)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 57
+2016-02-05 21:10:05.193000: Session with ('127.0.0.1', 51681) closed
+
+2016-02-05 21:11:10.244000: Connection from: ('127.0.0.1', 51683)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 58
+2016-02-05 21:11:10.271000: Session with ('127.0.0.1', 51683) closed
+
+2016-02-05 21:11:27.492000: Connection from: ('127.0.0.1', 51684)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 59
+2016-02-05 21:11:27.510000: Session with ('127.0.0.1', 51684) closed
+
+2016-02-05 21:12:19.485000: Connection from: ('127.0.0.1', 51686)
+UserNameList Requested
+2016-02-05 21:12:19.485000: Session with ('127.0.0.1', 51686) closed
+
+2016-02-05 21:12:19.488000: Connection from: ('127.0.0.1', 51687)
+Current work orders request
+2016-02-05 21:12:19.489000: Session with ('127.0.0.1', 51687) closed
+
+2016-02-05 21:12:23.913000: Connection from: ('127.0.0.1', 51692)
+UserNameList Requested
+2016-02-05 21:12:23.914000: Session with ('127.0.0.1', 51692) closed
+
+2016-02-05 21:12:57.802000: Connection from: ('127.0.0.1', 51696)
+Current work orders request
+2016-02-05 21:12:57.803000: Session with ('127.0.0.1', 51696) closed
+
+2016-02-05 21:13:15.908000: Connection from: ('127.0.0.1', 51697)
+LoginRequest for Scott Woerpel
+Given Password: 
+Password was incorrect
+2016-02-05 21:13:15.908000: Session with ('127.0.0.1', 51697) closed
+
+2016-02-05 21:13:29.588000: Connection from: ('127.0.0.1', 51698)
+LoginRequest for Scott Woerpel
+Given Password: cats
+Login was successful
+2016-02-05 21:13:29.588000: Session with ('127.0.0.1', 51698) closed
+
+2016-02-05 21:13:50.828000: Connection from: ('127.0.0.1', 51706)
+UserNameList Requested
+2016-02-05 21:13:50.829000: Session with ('127.0.0.1', 51706) closed
+
+2016-02-05 21:13:55.036000: Connection from: ('127.0.0.1', 51707)
+Current work orders request
+2016-02-05 21:13:55.037000: Session with ('127.0.0.1', 51707) closed
+
+2016-02-05 21:14:00.038000: Connection from: ('127.0.0.1', 51712)
+UserNameList Requested
+2016-02-05 21:14:00.039000: Session with ('127.0.0.1', 51712) closed
+
+2016-02-05 21:14:10.276000: Connection from: ('127.0.0.1', 51713)
+UserNameList Requested
+2016-02-05 21:14:10.276000: Session with ('127.0.0.1', 51713) closed
+
+2016-02-05 21:14:10.280000: Connection from: ('127.0.0.1', 51714)
+Current work orders request
+2016-02-05 21:14:10.281000: Session with ('127.0.0.1', 51714) closed
+
+2016-02-05 21:14:14.526000: Connection from: ('127.0.0.1', 51715)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-02-05 21:14:14.526000: Session with ('127.0.0.1', 51715) closed
+
+2016-02-05 21:14:18.772000: Connection from: ('127.0.0.1', 51716)
+Connection as: Dummy
+Work Order Creation Attempt
+Successfully created work order: 60
+2016-02-05 21:14:18.794000: Session with ('127.0.0.1', 51716) closed
+
+2016-02-05 21:14:25.285000: Connection from: ('127.0.0.1', 51717)
+UserNameList Requested
+2016-02-05 21:14:25.285000: Session with ('127.0.0.1', 51717) closed
+
+2016-02-05 21:14:25.289000: Connection from: ('127.0.0.1', 51718)
+Current work orders request
+2016-02-05 21:14:25.290000: Session with ('127.0.0.1', 51718) closed
+2016-02-05 21:14:46.518000: Server Stated
+
+2016-02-05 21:14:50.871000: Connection from: ('127.0.0.1', 51719)
+UserNameList Requested
+2016-02-05 21:14:50.871000: Session with ('127.0.0.1', 51719) closed
+
+2016-02-05 21:14:50.874000: Connection from: ('127.0.0.1', 51720)
+Current work orders request
+2016-02-05 21:14:50.875000: Session with ('127.0.0.1', 51720) closed
+
+2016-02-05 21:14:55.890000: Connection from: ('127.0.0.1', 51721)
+UserNameList Requested
+2016-02-05 21:14:55.890000: Session with ('127.0.0.1', 51721) closed
+
+2016-02-05 21:14:55.893000: Connection from: ('127.0.0.1', 51722)
+Current work orders request
+2016-02-05 21:14:55.894000: Session with ('127.0.0.1', 51722) closed
+
+2016-02-05 21:14:59.589000: Connection from: ('127.0.0.1', 51723)
+UserNameList Requested
+2016-02-05 21:14:59.590000: Session with ('127.0.0.1', 51723) closed
+
+2016-02-05 21:14:59.595000: Connection from: ('127.0.0.1', 51724)
+Current work orders request
+2016-02-05 21:14:59.595000: Session with ('127.0.0.1', 51724) closed
+
+2016-02-05 21:15:02.542000: Connection from: ('127.0.0.1', 51726)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-02-05 21:15:02.542000: Session with ('127.0.0.1', 51726) closed
+
+2016-02-05 21:15:06.389000: Connection from: ('127.0.0.1', 51727)
+UserNameList Requested
+2016-02-05 21:15:06.389000: Session with ('127.0.0.1', 51727) closed
+
+2016-02-05 21:15:06.392000: Connection from: ('127.0.0.1', 51728)
+Current work orders request
+2016-02-05 21:15:06.393000: Session with ('127.0.0.1', 51728) closed
+
+2016-02-05 21:15:12.090000: Connection from: ('127.0.0.1', 51729)
+LoginRequest for Scott Woerpel
+Given Password: cats
+Login was successful
+2016-02-05 21:15:12.090000: Session with ('127.0.0.1', 51729) closed
+
+2016-02-05 21:15:15.592000: Connection from: ('127.0.0.1', 51730)
+Connection as: Scott Woerpel
+Work Order Creation Attempt
+Successfully created work order: 61
+2016-02-05 21:15:15.604000: Session with ('127.0.0.1', 51730) closed
+
+2016-02-05 21:15:28.750000: Connection from: ('127.0.0.1', 51731)
+UserNameList Requested
+2016-02-05 21:15:28.750000: Session with ('127.0.0.1', 51731) closed
+
+2016-02-05 21:15:28.755000: Connection from: ('127.0.0.1', 51732)
+Current work orders request
+2016-02-05 21:15:28.755000: Session with ('127.0.0.1', 51732) closed
+2016-02-05 21:16:46.592000: Server Stated
+2016-02-05 21:16:58.991000: Server Stated
+
+2016-02-05 21:17:01.167000: Connection from: ('127.0.0.1', 51735)
+UserNameList Requested
+2016-02-05 21:17:01.167000: Session with ('127.0.0.1', 51735) closed
+
+2016-02-05 21:17:01.171000: Connection from: ('127.0.0.1', 51736)
+Current work orders request
+2016-02-05 21:17:01.171000: Session with ('127.0.0.1', 51736) closed
+2016-02-05 21:17:25.846000: Server Stated
+
+2016-02-05 21:17:29.766000: Connection from: ('127.0.0.1', 51737)
+UserNameList Requested
+2016-02-05 21:17:29.766000: Session with ('127.0.0.1', 51737) closed
+
+2016-02-05 21:17:29.769000: Connection from: ('127.0.0.1', 51738)
+Current work orders request
+2016-02-05 21:17:29.770000: Session with ('127.0.0.1', 51738) closed
+
+2016-02-05 21:17:36.770000: Connection from: ('127.0.0.1', 51739)
+UserNameList Requested
+2016-02-05 21:17:36.770000: Session with ('127.0.0.1', 51739) closed
+
+2016-02-05 21:17:36.773000: Connection from: ('127.0.0.1', 51740)
+Current work orders request
+2016-02-05 21:17:36.774000: Session with ('127.0.0.1', 51740) closed
+
+2016-02-05 21:17:45.956000: Connection from: ('127.0.0.1', 51741)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-02-05 21:17:45.956000: Session with ('127.0.0.1', 51741) closed
+
+2016-02-05 21:17:54.143000: Connection from: ('127.0.0.1', 51743)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 62
+2016-02-05 21:17:54.155000: Session with ('127.0.0.1', 51743) closed
+2016-02-05 21:19:51.334000: Server Stated
+
+2016-02-05 21:19:57.241000: Connection from: ('127.0.0.1', 51761)
+UserNameList Requested
+2016-02-05 21:19:57.242000: Session with ('127.0.0.1', 51761) closed
+
+2016-02-05 21:19:57.246000: Connection from: ('127.0.0.1', 51762)
+Current work orders request
+2016-02-05 21:19:57.246000: Session with ('127.0.0.1', 51762) closed
+
+2016-02-05 21:21:04.597000: Connection from: ('127.0.0.1', 51763)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-02-05 21:21:04.598000: Session with ('127.0.0.1', 51763) closed
+
+2016-02-05 21:21:07.780000: Connection from: ('127.0.0.1', 51764)
+Connection as: Dummy
+Work Order Creation Attempt
+Successfully created work order: 63
+2016-02-05 21:21:07.794000: Session with ('127.0.0.1', 51764) closed
+
+2016-02-05 21:21:22.957000: Connection from: ('127.0.0.1', 51765)
+UserNameList Requested
+2016-02-05 21:21:22.958000: Session with ('127.0.0.1', 51765) closed
+
+2016-02-05 21:21:22.961000: Connection from: ('127.0.0.1', 51766)
+Current work orders request
+2016-02-05 21:21:22.961000: Session with ('127.0.0.1', 51766) closed
+
+2016-02-05 21:21:31.758000: Connection from: ('127.0.0.1', 51767)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-02-05 21:21:31.758000: Session with ('127.0.0.1', 51767) closed
+
+2016-02-05 21:21:38.419000: Connection from: ('127.0.0.1', 51768)
+UserNameList Requested
+2016-02-05 21:21:38.419000: Session with ('127.0.0.1', 51768) closed
+
+2016-02-05 21:21:38.424000: Connection from: ('127.0.0.1', 51769)
+Current work orders request
+2016-02-05 21:21:38.425000: Session with ('127.0.0.1', 51769) closed
+2016-02-05 21:22:05.533000: Server Stated
+
+2016-02-05 21:22:07.845000: Connection from: ('127.0.0.1', 51770)
+UserNameList Requested
+2016-02-05 21:22:07.845000: Session with ('127.0.0.1', 51770) closed
+
+2016-02-05 21:22:07.849000: Connection from: ('127.0.0.1', 51771)
+Current work orders request
+2016-02-05 21:22:07.849000: Session with ('127.0.0.1', 51771) closed
+
+2016-02-05 21:22:16.921000: Connection from: ('127.0.0.1', 51772)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-02-05 21:22:16.921000: Session with ('127.0.0.1', 51772) closed
+
+2016-02-05 21:22:27.123000: Connection from: ('127.0.0.1', 51773)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 64
+2016-02-05 21:22:27.133000: Session with ('127.0.0.1', 51773) closed
+
+2016-02-05 21:23:18.773000: Connection from: ('127.0.0.1', 51788)
+UserNameList Requested
+2016-02-05 21:23:18.773000: Session with ('127.0.0.1', 51788) closed
+
+2016-02-05 21:23:18.777000: Connection from: ('127.0.0.1', 51789)
+Current work orders request
+2016-02-05 21:23:18.777000: Session with ('127.0.0.1', 51789) closed
+
+2016-02-05 21:23:27.136000: Connection from: ('127.0.0.1', 51790)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-02-05 21:23:27.136000: Session with ('127.0.0.1', 51790) closed
+
+2016-02-05 21:23:32.389000: Connection from: ('127.0.0.1', 51791)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 65
+2016-02-05 21:23:32.398000: Session with ('127.0.0.1', 51791) closed
+
+2016-02-05 21:23:39.060000: Connection from: ('127.0.0.1', 51792)
+Connection as: Clide
+Work Order Creation Attempt
+Successfully created work order: 66
+2016-02-05 21:23:39.074000: Session with ('127.0.0.1', 51792) closed
+
+2016-02-05 21:23:48.921000: Connection from: ('127.0.0.1', 51793)
+UserNameList Requested
+2016-02-05 21:23:48.921000: Session with ('127.0.0.1', 51793) closed
+
+2016-02-05 21:23:48.924000: Connection from: ('127.0.0.1', 51794)
+Current work orders request
+2016-02-05 21:23:48.925000: Session with ('127.0.0.1', 51794) closed
+
+2016-02-05 21:23:55.730000: Connection from: ('127.0.0.1', 51795)
+LoginRequest for Clide
+Given Password: 
+Login was successful
+2016-02-05 21:23:55.730000: Session with ('127.0.0.1', 51795) closed
+
+2016-02-05 21:24:01.784000: Connection from: ('127.0.0.1', 51796)
+UserNameList Requested
+2016-02-05 21:24:01.784000: Session with ('127.0.0.1', 51796) closed
+
+2016-02-05 21:24:01.787000: Connection from: ('127.0.0.1', 51797)
+Current work orders request
+2016-02-05 21:24:01.788000: Session with ('127.0.0.1', 51797) closed
+
+2016-02-05 21:24:06.640000: Connection from: ('127.0.0.1', 51798)
+UserNameList Requested
+2016-02-05 21:24:06.641000: Session with ('127.0.0.1', 51798) closed
+
+2016-02-05 21:24:06.644000: Connection from: ('127.0.0.1', 51799)
+Current work orders request
+2016-02-05 21:24:06.644000: Session with ('127.0.0.1', 51799) closed
+
+2016-02-05 21:24:09.601000: Connection from: ('127.0.0.1', 51800)
+UserNameList Requested
+2016-02-05 21:24:09.601000: Session with ('127.0.0.1', 51800) closed
+
+2016-02-05 21:24:09.605000: Connection from: ('127.0.0.1', 51801)
+Current work orders request
+2016-02-05 21:24:09.606000: Session with ('127.0.0.1', 51801) closed
+
+2016-02-05 21:24:21.815000: Connection from: ('127.0.0.1', 51812)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-02-05 21:24:21.816000: Session with ('127.0.0.1', 51812) closed
+
+2016-02-05 21:29:00.435000: Connection from: ('127.0.0.1', 51817)
+UserNameList Requested
+2016-02-05 21:29:00.435000: Session with ('127.0.0.1', 51817) closed
+
+2016-02-05 21:29:00.439000: Connection from: ('127.0.0.1', 51818)
+Current work orders request
+2016-02-05 21:29:00.439000: Session with ('127.0.0.1', 51818) closed
+
+2016-02-05 21:29:06.699000: Connection from: ('127.0.0.1', 51819)
+UserNameList Requested
+2016-02-05 21:29:06.699000: Session with ('127.0.0.1', 51819) closed
+
+2016-02-05 21:29:06.704000: Connection from: ('127.0.0.1', 51820)
+Current work orders request
+2016-02-05 21:29:06.704000: Session with ('127.0.0.1', 51820) closed
+
+2016-02-05 21:29:10.052000: Connection from: ('127.0.0.1', 51822)
+LoginRequest for Dummy
+Given Password: 
+Login was successful
+2016-02-05 21:29:10.052000: Session with ('127.0.0.1', 51822) closed
+
+2016-02-05 21:29:11.886000: Connection from: ('127.0.0.1', 51823)
+Connection as: Dummy
+Work Order Creation Attempt
+Successfully created work order: 67
+2016-02-05 21:29:11.899000: Session with ('127.0.0.1', 51823) closed
+
+2016-02-05 21:29:12.040000: Connection from: ('127.0.0.1', 51824)
+Connection as: Dummy
+Work Order Creation Attempt
+Successfully created work order: 68
+2016-02-05 21:29:12.052000: Session with ('127.0.0.1', 51824) closed
+
+2016-02-05 21:29:12.478000: Connection from: ('127.0.0.1', 51825)
+Connection as: Dummy
+Work Order Creation Attempt
+Successfully created work order: 69
+2016-02-05 21:29:12.492000: Session with ('127.0.0.1', 51825) closed
+
+2016-02-05 21:29:16.749000: Connection from: ('127.0.0.1', 51826)
+UserNameList Requested
+2016-02-05 21:29:16.749000: Session with ('127.0.0.1', 51826) closed
+
+2016-02-05 21:29:16.752000: Connection from: ('127.0.0.1', 51827)
+Current work orders request
+2016-02-05 21:29:16.753000: Session with ('127.0.0.1', 51827) closed
+
+2016-02-05 21:29:23.547000: Connection from: ('127.0.0.1', 51828)
+UserNameList Requested
+2016-02-05 21:29:23.547000: Session with ('127.0.0.1', 51828) closed
+
+2016-02-05 21:29:23.550000: Connection from: ('127.0.0.1', 51829)
+Current work orders request
+2016-02-05 21:29:23.551000: Session with ('127.0.0.1', 51829) closed

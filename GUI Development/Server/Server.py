@@ -9,6 +9,7 @@ import Parameters
 import ServerFunctions
 
 
+
 HOST = "localhost"
 PORT = 6000
 address = (HOST, PORT)
@@ -24,6 +25,8 @@ parameters = Parameters.ParameterManager()
 parameters.LoadSettings()
 
 serverFunctions = ServerFunctions.ServerFunctions(log, users, parameters, currentWorkOrders)
+
+
 
 class RequestHandler(SRH):
     """
@@ -52,8 +55,6 @@ class RequestHandler(SRH):
         log.WriteToLogWithTimeStamp("Connection from: " + str(self.client_address))
 
         incommingMessageSize =  int(self.request.recv(6), 16)
-
-
 
         self.serializedMessage = self.request.recv(incommingMessageSize)
         self.message = loads(self.serializedMessage)
@@ -93,12 +94,8 @@ class RequestHandler(SRH):
         elif self.messageType == codes["BufferSizeRequest"]:
             serverFunctions.SendReceiveBufferSize()
 
-        elif self.messageType == codes["CurrentWorkOrdersMessageSizeRequest"]:
-            serverFunctions.SendCurrentWorkOrdersMessageSize(currentWorkOrders.pickledWorkOrderSize)
-
         elif self.messageType == codes["CurrentWorkOrdersRequest"]:
             serverFunctions.SendCurrentWorkOrders(currentWorkOrders.workOrders)
-
 
 
         log.WriteToLogWithTimeStamp("Session with %s closed" % str(self.client_address))

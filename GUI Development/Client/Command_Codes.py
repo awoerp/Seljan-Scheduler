@@ -5,4 +5,4 @@ codes = {"True" : "00",
          "WorkOrderCreationRequest" : "04",
          "BufferSizeRequest" : "06",
          "CurrentWorkOrdersRequest" : "07",
-         "CurrentWorkOrdersMessageSizeRequest" : "08"}
+         "ResponseAcknowledged" : "08"}

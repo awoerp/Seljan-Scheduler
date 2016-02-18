@@ -25,7 +25,6 @@ class ServerComs():
         if response == codes["False"]:
             pass
 
-
     def RequestCurrentJobs(self):
         return self.Send_RecieveMessage(codes["CurrentWorkOrdersRequest"])
 
@@ -52,9 +51,12 @@ class ServerComs():
 
     def RecieveMessage(self, clientSocket, **kargs):
 
-        incommingMessageSize =  int(clientSocket.recv(6), 16)
+        messageSize = clientSocket.recv(6)
+        incommingMessageSize =  int(messageSize, 16)
+        serializedResponse = ""
+        while len(serializedResponse) < incommingMessageSize:
+            serializedResponse += clientSocket.recv(1024)
 
-        serializedResponse = clientSocket.recv(incommingMessageSize + 500)
         return loads(serializedResponse)
 
     def Send_RecieveMessage(self, messageCode, *args):
@@ -64,7 +66,8 @@ class ServerComs():
         :param message:
         :return <serialized response from server>:
         """
-        return self.RecieveMessage(self.SendMessage(messageCode, args))
+        response = self.RecieveMessage(self.SendMessage(messageCode, args))
+        return response
 
     def ConstructPickledMessage(self, messageCode, args):
         message = []
@@ -84,6 +87,7 @@ class ServerComs():
 
         serializedMessage = dumps(message)
         return serializedMessage
+
 
 
 

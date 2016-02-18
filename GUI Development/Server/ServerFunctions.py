@@ -1,6 +1,7 @@
 from cPickle import dumps, loads
 
 from Command_Codes import codes
+from time import sleep
 
 
 class ServerFunctions():
@@ -10,6 +11,7 @@ class ServerFunctions():
         self.users = users
         self.parameters = parameters
         self.currentWorkOrders = currentWorkOrders
+        self.delayRatio = 0.1/1000  #delay 0.1 seconds per 5000 characters
 
     def SendUserNameList(self):
         usernameList = []
@@ -59,10 +61,17 @@ class ServerFunctions():
         self.Send(workOrdersArray)
         self.log.WriteToLog("Current work orders request")
 
+
     def SetHandler(self, handler):
         self.handler = handler
 
     def Send(self, message):
         serializedMessage = dumps(message)
-        messageSize = format(len(serializedMessage), '04x')
+        loads(serializedMessage)
+        messageLength = len(serializedMessage)
+        messageSize = format(messageLength, '04x')
+        print("messageSize = " + messageSize)
         self.handler.SendMessage("0x" + messageSize + serializedMessage)
+        print("Message Length = " + str(messageLength))
+        print("Delay Time = " + str(self.delayRatio * messageLength))
+        sleep(self.delayRatio * messageLength)
